@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 @import '../styles/colors';
 @import '../styles/mixins';
+@import '../styles//animations';
+@import '../styles/base';
+@import '../styles/fonts';
+@import '../styles/functions';
+@import '../styles/helpers';
+@import '../styles/typography';
+@import '../styles/utilities';
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
 
 :root {
 
