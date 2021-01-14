@@ -1,0 +1,11 @@
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return #{$rem-size}rem;
+  @debug 'calculate-rem: #{$calculate-rem}';
+}
+
+@function calc-em($size) {
+  $em-size: $size / 16px;
+  @return #{$em-size}em;
+  @debug 'calc-em: #{$calc-em}';
+}

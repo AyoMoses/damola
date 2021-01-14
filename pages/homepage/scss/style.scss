@@ -1,0 +1,837 @@
+@import '../../../styles/global.scss';
+
+
+// PAGE CONTENT
+.home-hero {
+
+    width: 100%;
+    max-height: calc(100vh - 75px);
+    height: 100vh;
+    background: #fff url('../../../assets/bitmaps/hp-hero.png');
+    background-repeat: no-repeat;
+    background-size: 100% 90vh;
+    max-width: 100%;
+    background-position: bottom center;
+    background-attachment: fixed;
+
+    @include mobileFirst(769) {
+
+        // HOME HERO
+        width: 100%;
+        max-height: calc(100vh - 65px);
+        height: 100vh;
+        background: #fff url('../../../assets/bitmaps/hp-hero.png');
+        background-repeat: no-repeat;
+        background-size: 100% 60vh;
+        background-position: bottom center;
+        max-width: 100%;
+        background-attachment: fixed;
+
+    }
+
+    // HERO TEXT
+    .home-hero--text {
+
+        font-weight: 200;
+        font-size: 1.5rem;
+        line-height: 29px;
+        color: $font-color;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding-top: 60px;
+        margin-bottom: 119px;
+
+        @include mobileFirst(769) {
+
+            padding-top: 120.48px;
+            margin-bottom: 112.62px;
+            font-weight: 200;
+            font-size: 2.2rem;
+            line-height: 4.25rem;
+        }
+
+        @include mobileFirst(1440) {
+
+            font-size: 2.3rem;
+            padding-top: 223.48px;
+            margin-bottom: 192.62px;
+        }
+
+        .mobile-break {
+            display: block;
+
+            @include mobileFirst(769) {
+
+                display: inline;
+            }
+        }
+
+        .desktop-break {
+
+            display: inline;
+
+            @include mobileFirst(769) {
+
+                display: block;
+            }
+        }
+
+        .text-brand-color {
+
+            color: $brand-color;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            @include mobileFirst(769) {}
+        }
+    }
+
+    // HERO CTA BTN
+    .hero-cta-wrap {
+
+        @include flex-row;
+
+        .hero-cta-btn {
+
+            height: 50px;
+            width: 140px;
+            outline: none;
+            border: none;
+            background: $brand-color;
+            color: $font-color;
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            @include radius-200px;
+
+            &:focus {
+
+
+                background: lighten($color: $brand-color, $amount: 3%);
+                color: $white;
+                font-weight: 600;
+            }
+
+            @include mobileFirst(769) {
+
+                width: 200px;
+                height: 60px;
+                font-size: 1rem;
+                @include transition;
+                cursor: pointer;
+
+                &:hover {
+
+                    box-shadow: 2px 5px 15px rgba($color: $brand-color, $alpha: .6);
+                    background: lighten($color: $brand-color, $amount: 3%);
+                    color: $white;
+                    font-weight: 600;
+                }
+
+                &:focus {
+
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+// WHO WE ARE SECTION styles
+.who-we-are-wrap {
+
+    @include column;
+    width: 100%;
+    background: $brand-color;
+
+    @include mobileFirst(769) {
+
+        @include row;
+        align-items: center;
+    }
+
+    .who-we-are-text-col {
+
+        flex: 1;
+        padding: 37px 49px 56px 49px;
+        text-align: center;
+
+        @include mobileFirst(769) {
+
+            text-align: left;
+            padding: 0 89px 0 86px;
+        }
+
+        .who-we-are-header {
+
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 29px;
+            color: $font-color;
+
+        }
+
+        .who-we-are-text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 25px;
+            color: $font-color;
+            padding-top: 20px;
+            padding-bottom: 37px;
+        }
+
+        .learn-more-link {
+
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            color: $white;
+
+
+            @include mobileFirst(769) {
+
+                @include transition-color;
+                cursor: pointer;
+
+                &:hover {
+
+                    color: $brand-color-dark;
+
+                }
+            }
+        }
+
+    }
+
+    .who-we-are-image-col {
+
+        flex: 1;
+        padding: 0 27px 42px 29px;
+
+        @include mobileFirst(769) {
+
+            padding: 130px 99px 129.46px;
+        }
+    }
+}
+
+
+// WHAT WE DO STYLES
+.what-we-do-wrap {
+
+    padding-top: 42px;
+    @include column;
+    align-items: center;
+
+    @include mobileFirst(769) {
+
+        padding-top: 60px;
+        padding-bottom: 175px;
+        width: 100%;
+        max-width: calc(100% - 179px);
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .what-we-do-header {
+
+        font-weight: normal;
+        font-size: 2.25rem;
+        line-height: 72px;
+        letter-spacing: -0.015em;
+        color: $font-color;
+
+        @include mobileFirst(769) {
+
+            font-weight: normal;
+            font-size: 2.2rem;
+            line-height: 72px;
+            letter-spacing: -0.015em;
+            color: $font-color;
+            padding: 0 0 20px 0;
+
+        }
+    }
+
+    .what-we-do-text {
+
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: -0.015em;
+        line-height: 33px;
+        color: $font-rgba;
+        width: 100%;
+        max-width: calc(100% - 60px);
+        margin: 0 auto;
+
+        @include mobileFirst(769) {
+
+            font-size: 1.2rem;
+            max-width: 100%;
+            text-align: left;
+            margin-bottom: 112px;
+        }
+    }
+
+    .what-we-do-details {
+
+        @include column;
+        width: 100%;
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+
+        @include mobileFirst(769) {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 107px;
+            max-width: 100%;
+
+        }
+
+
+        .what-we-do-card {
+
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            height: auto;
+            width: 100%;
+
+            &:first-of-type {
+
+                margin-top: 28px;
+
+                @include mobileFirst(769) {
+
+                    margin-top: 0;
+                }
+            }
+
+
+            &:not(:last-of-type) {
+
+                margin-bottom: 36.72px;
+
+                @include mobileFirst(769) {
+
+                    margin-bottom: 0;
+                }
+            }
+
+            &:last-of-type {
+
+                margin-bottom: 40px;
+
+                @include mobileFirst(769) {
+
+                    margin-bottom: 0;
+                }
+            }
+
+            @include mobileFirst(769) {
+
+                height: auto;
+            }
+
+            .card-image {
+
+                height: 150px;
+                width: 100%;
+                object-position: center;
+
+                @include mobileFirst(769) {
+
+                    height: 200px;
+                }
+            }
+
+            .card-header {
+
+                margin-top: 15px;
+                text-align: left;
+                font-weight: bold;
+                font-size: 1.2rem;
+                letter-spacing: -0.015em;
+                color: $font-color;
+                padding: 0 14px;
+
+                @include mobileFirst(769) {
+
+                    padding: 0 20px;
+
+                }
+            }
+
+            .card-text {
+
+                text-align: left;
+                font-weight: normal;
+                font-size: 1.125rem;
+                line-height: 1.5;
+                letter-spacing: -0.015em;
+                color: $font-rgba;
+                padding: 20px 14px;
+
+                @include mobileFirst(769) {
+
+                    padding: 20px 20px;
+                }
+            }
+        }
+    }
+}
+
+
+// IMAGE SLIDE
+.slideshow-container {
+    width: 100%;
+    max-width: 100%;
+    height: 884px;
+    position: relative;
+    background: $brand-color-dark;
+    padding-bottom: 50px;
+
+    @include mobileFirst(769) {
+
+        height: 450px;
+    }
+}
+
+.mySlides {
+
+    display: none;
+    height: 100%;
+    // padding-right: 3em;
+
+    .slide-image {
+
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        bottom: 0;
+        padding-bottom: 50px;
+
+        @include mobileFirst(769) {
+
+            height: 450px;
+            width: 44%;
+            padding-bottom: 0;
+            right: 0;
+        }
+    }
+
+    .text-wrapper {
+
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        @include mobileFirst(769) {
+
+            width: 50%;
+            height: 100%;
+        }
+
+
+        .review-header {
+
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-align: center;
+            color: $white;
+            width: 100%;
+            padding: 67px 55px 0 55px;
+
+            @include mobileFirst(769) {
+
+                font-weight: 600;
+                font-size: 1.5rem;
+                text-align: left;
+                color: $white;
+                padding: 67px 55px 0 80px;
+
+            }
+        }
+
+        .review-comment {
+
+            font-weight: normal;
+            font-size: .9rem;
+            text-align: center;
+            letter-spacing: -0.015em;
+            color: $white-rgba;
+            padding: 23px 40px 21px 40px;
+
+            @include mobileFirst(769) {
+
+                font-size: 1rem;
+                text-align: left;
+                margin-bottom: 20px;
+                padding: 23px 80px 21px 80px;
+            }
+        }
+
+        .review-image-wrap {
+
+            @include column;
+            align-items: center;
+
+            @include mobileFirst(769) {
+
+                @include row;
+                margin-left: 80px;
+            }
+
+            .image-review {
+
+                width: 44px;
+                height: 44px;
+                @include radius-50;
+                object-position: center;
+                object-fit: cover;
+                margin-bottom: 20px;
+
+                @include mobileFirst(769) {
+
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .review-name {
+
+            font-weight: normal;
+            font-size: 0.675rem;
+            letter-spacing: -0.015em;
+            color: $white-rgba;
+            text-align: center;
+
+            @include mobileFirst(769) {
+
+                text-align: left;
+                margin-left: 20px;
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+.dots-wrapper {
+
+    position: absolute;
+    bottom: 50%;
+    z-index: 200;
+    width: 100%;
+    text-align: center;
+
+    @include mobileFirst(769) {
+
+        bottom: 5%;
+    }
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: $white-rgba;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    -webkit-transition: background-color .6s ease;
+    -moz-transition: background-color .6s ease;
+    -ms-transition: background-color .6s ease;
+    -o-transition: background-color .6s ease;
+}
+
+
+.active,
+.dot:hover {
+    background-color: $white;
+}
+
+
+
+// IN GOOD HANDS...BRANDS
+.good-company-wrap {
+
+    padding: 76px 36px 60px 36px;
+
+    @include mobileFirst(769) {
+
+        padding: 140px 60px 90px 60px;
+    }
+
+    .good-company-header {
+
+        padding-bottom: 63px;
+        font-size: 1.2rem;
+        text-align: center;
+        color: $font-color;
+
+        @include mobileFirst(769) {
+
+            font-size: 2rem;
+        }
+    }
+
+    .good-company__inner {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+
+        @include mobileFirst(769) {
+
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            align-content: center;
+        }
+
+        .brands-wrap {
+
+            @include mobileFirst(769) {
+
+                @include flex-row;
+            }
+        }
+    }
+
+
+}
+
+
+// CONTACT SECTION
+.contact-form-wrap {
+
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    background: url('../../../assets/bitmaps/contact-bg.jpg'), rgba($color: $brand-color, $alpha: .6) no-repeat center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+
+    @include column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobileFirst(769) {
+
+        padding-bottom: 30px;
+    }
+
+    .contact-header {
+
+        font-weight: 500;
+        font-size: 1.55rem;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: $white;
+        padding: 25px 30px 40px 30px;
+
+        @include mobileFirst(769) {
+
+            font-size: 3rem;
+            padding-top: 65px;
+
+        }
+    }
+
+    // FORMS
+    .forms-wrap {
+
+        width: 100%;
+        max-width: calc(100% - 70px);
+        margin: 0 auto;
+
+        @include mobileFirst(769) {
+
+            max-width: calc(100% - 50%);
+            margin: auto;
+            padding: 35px 64px 0 64px;
+            border: 2px solid $white;
+        }
+
+        .contact__inner--header {
+
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-align: center;
+            letter-spacing: -0.015em;
+            color: $white;
+            padding-bottom: 20px;
+
+            @include mobileFirst(769) {
+
+                text-align: left;
+            }
+        }
+
+        .form-input-group {
+
+            @include column;
+
+            @include mobileFirst(769) {
+
+                display: flex;
+                flex-direction: row;
+
+                .right {
+
+                    margin-right: 2em;
+                }
+
+            }
+        }
+
+        .form-input {
+
+            width: 100%;
+            height: 50.8px;
+            background: rgba(0, 206, 183, 0.9);
+            margin-bottom: 20px;
+            padding-left: .5rem;
+            border: none;
+            outline: none;
+            @include radius-3px;
+            @include transition;
+
+            &:focus {
+
+                border: 1px solid $white;
+                color: $white;
+                caret-color: $white;
+
+                /* WebKit, Edge */
+                &::-webkit-input-placeholder {
+                    color: $white;
+                }
+
+                /* Firefox 4-18 */
+                &:-moz-placeholder {
+                    color: $white;
+                }
+
+                /* Firefox 19+ */
+                &::-moz-placeholder {
+                    color: $white;
+                }
+
+                /* IE 10-11 */
+                &:-ms-input-placeholder {
+                    color: $white;
+                }
+
+                /* Edge */
+                &::-ms-input-placeholder {
+                    color: $white;
+
+                }
+
+                /* MODERN BROWSER */
+                &::placeholder {
+                    color: $white;
+                }
+            }
+
+            /* WebKit, Edge */
+            &::-webkit-input-placeholder {
+                color: $font-color;
+                font-size: .9rem;
+                letter-spacing: -0.015em;
+            }
+
+            /* Firefox 4-18 */
+            &:-moz-placeholder {
+                color: $font-color;
+                opacity: 1;
+                font-size: .9rem;
+                letter-spacing: -0.015em;
+            }
+
+            /* Firefox 19+ */
+            &::-moz-placeholder {
+                color: $font-color;
+                opacity: 1;
+                font-size: .9rem;
+                letter-spacing: -0.015em;
+            }
+
+            /* IE 10-11 */
+            &:-ms-input-placeholder {
+                color: $font-color;
+                font-size: .9rem;
+                letter-spacing: -0.015em;
+            }
+
+            /* Edge */
+            &::-ms-input-placeholder {
+                color: $font-color;
+                font-size: .9rem;
+                letter-spacing: -0.015em;
+            }
+
+            /* MODERN BROWSER */
+            &::placeholder {
+                color: $font-color;
+                font-size: .9rem;
+                letter-spacing: -0.015em;
+            }
+        }
+
+        .textarea-input {
+
+            width: 100%;
+            height: 200.63px;
+            resize: none;
+            padding-top: 10px;
+
+            @include mobileFirst(769) {
+
+                height: 100px;
+            }
+        }
+
+        .contact-btn {
+
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 50px;
+            background: $white;
+            color: $font-color;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            @include radius-6px;
+            @include transition;
+            margin-bottom: 50px;
+
+            &:focus {
+
+                background: darken($color: #fff, $amount: 50%);
+            }
+
+            @include mobileFirst(769) {
+
+                width: 120px;
+                height: 45px;
+                font-size: .8rem;
+                cursor: pointer;
+
+                &:hover {
+
+                    border: solid 1px $white;
+                    background: transparent;
+                    color: $white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

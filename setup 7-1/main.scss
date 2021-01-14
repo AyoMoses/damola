@@ -1,0 +1,21 @@
+// 1. Configuration and helpers
+@import 'abstracts/colors', 'abstracts/functions', 'abstracts/mixins';
+
+@import 'vendors/normalize', 'vendors/slick';
+
+@import 'base/base', 'base/fonts', 'base/typography', 'base/utilities',
+  'base/helpers';
+
+@import 'layout/header', 'layout/footer';
+
+// COMPONENT STYLES
+@import 'components/loader', 'components/_cart',
+  'components/single-restaurant-card', 'components/single-restaurant-hero',
+  'components/user-order-card', 'components/user-checkout-menu',
+  'components/customize-item-modal', 'components/about-restaurant-modal', 'components/product-info-modal' ,'components/payment-successful';
+
+// PAGE STYLES
+@import 'pages/home', 'pages/restaurants', 'pages/single_restaurant',
+  'pages/checkout', 'pages/new-checkout-page';
+
+@import 'themes/default';

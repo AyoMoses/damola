@@ -1,0 +1,936 @@
+// HOME-HERO STYLES
+.home-hero-wrap {
+  display: flex;
+  align-items: center;
+
+  height: 379px;
+  width: 100%;
+  max-width: 100%;
+  background: url('../../assets/images/bitmaps/home-hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include mobileFirst(769) {
+    height: 95vh;
+    max-height: calc(100vh - 100px);
+  }
+
+  .home-hero__inner {
+    width: 100%;
+    padding-top: 69px;
+    position: relative;
+    margin: 0 41px 0 32px;
+    max-width: calc(100% - 73px);
+
+    @include deskTopFirst(374) {
+      max-width: calc(100% - 43px);
+      margin: 0 auto;
+    }
+
+    @include mobileFirst(769) {
+      max-width: calc(100vw - 30vw);
+      margin: 0 auto 0 82px;
+    }
+
+    .home-hero--header {
+      font-weight: lighter;
+      line-height: 40px;
+      color: $dark-brand-color;
+      font-size: calculate-rem(32px);
+
+      @include deskTopFirst(374) {
+        font-size: calculate-rem(24px);
+      }
+
+      @include mobileFirst(769) {
+        font-size: calculate-rem(64px);
+      }
+
+      .hero-block {
+        display: block;
+      }
+
+      .hero-inline {
+        @include mobileFirst(769) {
+          display: inline;
+        }
+      }
+
+      .brand-bg {
+        color: #ffffff;
+        background: $brand-color;
+        width: fit-content;
+      }
+
+      .hero-bold {
+        font-weight: 700;
+      }
+
+      .hero-margin-bottom {
+        margin-bottom: 16px;
+
+        @include mobileFirst(769) {
+          margin-bottom: 48px;
+          padding-bottom: 0.25em;
+          padding-top: 0.25em;
+        }
+      }
+    }
+
+    .home-hero--details {
+      font-weight: 450;
+      font-size: calculate-rem(12px);
+      line-height: 154.1%;
+      letter-spacing: 0.03em;
+      color: $dark-brand-color;
+      @include margins(16px 0);
+
+      @include mobileFirst(769) {
+        @include margins(48px 0 48px 0);
+        font-size: calculate-rem(18px);
+        font-weight: 500;
+        width: 100%;
+        max-width: 60%;
+      }
+    }
+
+    // SEARCHBAR STYLES
+    .searchbar-wrap {
+      position: relative;
+      width: 100%;
+      height: 55px;
+      background: $white;
+      @include border-radius(3px);
+      @include column;
+      align-items: center;
+      justify-content: center;
+
+      @include mobileFirst(769) {
+        height: 102px;
+      }
+
+      .searchbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .location-icon {
+          position: absolute;
+          left: 12.5px;
+          top: 17.5px;
+
+          @include mobileFirst(769) {
+            width: 15px;
+            height: 15px;
+            top: 42px;
+            left: 35px;
+          }
+        }
+
+        .search-input {
+          height: 50px;
+
+          @include mobileFirst(769) {
+            height: 100%;
+          }
+
+          width: 100%;
+          flex: 1;
+          border: none;
+          outline: none;
+          padding-left: 34px;
+          padding-right: 5px;
+          font-weight: 450;
+          font-size: calculate-rem(10px);
+          line-height: 154.1%;
+          letter-spacing: 0.03em;
+          color: $font-color;
+          @include transition-color;
+          @include border-radius(3px);
+
+          &:focus {
+            @include placeholder($brand-color);
+            caret-color: $brand-color;
+            color: $brand-color;
+          }
+
+          @include placeholder($grey);
+
+          @include mobileFirst(769) {
+            font-size: calculate-rem(16px);
+            padding-left: 70px;
+          }
+        }
+
+        .clear-select-icon {
+          margin-right: 1rem;
+          cursor: pointer;
+          width: 11px;
+          height: 11px;
+
+          @include mobileFirst(769) {
+            right: 20px;
+            top: 42%;
+            width: 22px;
+            height: 22px;
+          }
+        }
+
+        .search-btn {
+          @include btn-style($brand-color, $white, 100px, 41px, none);
+          @include border-radius(5px);
+          margin-left: 0.5px;
+          margin-right: 7px;
+          font-weight: bold;
+          font-size: calculate-rem(10px);
+          line-height: 154.1%;
+          letter-spacing: 0.03em;
+          color: #ffffff;
+
+          @include mobileFirst(769) {
+            height: 70px;
+            width: 214px;
+            margin-right: 19px;
+            font-size: calculate-rem(16px);
+            @include transition;
+
+            &:hover {
+              background: darken($color: $brand-color, $amount: 3%);
+              @include box-shadow(
+                2px 4px 10px 0 rgba($color: $brand-color, $alpha: 0.5)
+              );
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    // DROPDOWN STYLES
+    .dd-menu {
+      color: $font-color;
+      font-weight: 600;
+      font-size: calculate-rem(9px);
+      position: absolute;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 4px;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      list-style-type: none;
+
+      @include mobileFirst(769) {
+        font-size: calculate-rem(16px);
+        width: 100%;
+      }
+    }
+
+    .dd-input + .dd-menu {
+      display: none;
+    }
+
+    .dd-input:checked + .dd-menu {
+      display: block;
+    }
+
+    .dd-menu li {
+      padding: 1.5rem;
+      cursor: pointer;
+      white-space: nowrap;
+      text-align: left;
+      @include row;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include mobileFirst(769) {
+        padding: 1.8rem;
+      }
+
+      svg {
+        margin-right: 0.3em;
+        width: 12px;
+        height: 12px;
+
+        @include mobileFirst(769) {
+          margin-right: 1em;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .dd-menu li:hover {
+      background-color: #f6f6f6;
+    }
+
+    .dd-menu li a {
+      display: block;
+      margin: -10px -20px;
+      padding: 10px 20px;
+    }
+
+    .dd-menu li.divider {
+      padding: 0;
+      border-bottom: 1px solid #cccccc;
+    }
+  }
+}
+
+// HOME-HERO STYLES END
+
+// ORDER STEPS STYLE
+
+.order-steps-wrap {
+  background: $white;
+  width: 100%;
+  max-width: calc(100% - 26px);
+  margin: 0 auto;
+  @include paddings(43.31px 0 43px 0);
+
+  @include mobileFirst(769) {
+    width: 100%;
+    max-width: calc(100% - 296px);
+    margin: 0 auto;
+    @include paddings(69.19px 0 115px 0);
+  }
+
+  .order-steps__header-wrap {
+    @include column;
+    text-align: center;
+
+    .order-steps__icon {
+      align-self: center;
+    }
+
+    .order-steps__header {
+      font-weight: 500;
+      font-size: calculate-rem(24px);
+      line-height: 154.1%;
+      letter-spacing: 0.03em;
+      color: $dark-brand-color;
+
+      @include mobileFirst(769) {
+        font-size: calculate-rem(36px);
+        font-weight: 600;
+        @include margins(19.9px 0 17px 0);
+      }
+    }
+
+    .order-steps__details {
+      font-weight: 450;
+      font-size: calculate-rem(12px);
+      letter-spacing: 0.03em;
+      color: $font-color;
+      @include margins(11px 0 24px 0);
+
+      @include mobileFirst(769) {
+        font-size: calculate-rem(16px);
+      }
+    }
+  }
+
+  // DETAILS COLUMN
+  .order-steps__details-wrap {
+    @include mobileFirst(769) {
+      @include flex-space-between;
+      margin-top: 75px;
+    }
+
+    .dash-horizontal-rule {
+      display: none;
+
+      @include mobileFirst(769) {
+        display: block;
+        align-self: flex-start;
+        border-top: 1px dashed #cff09e;
+        flex: 1;
+        margin-top: 30px;
+      }
+    }
+
+    .order-steps__col {
+      @include column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-bottom: 71px;
+
+        @include mobileFirst(769) {
+          margin-bottom: 0;
+        }
+      }
+
+      .order-steps__col--icon-wrap {
+        width: 46px;
+        height: 46px;
+        border: 0.5px solid $fade-grey;
+        @include radius-percent(50%);
+        @include flex-row;
+
+        @include mobileFirst(769) {
+          width: 60px;
+          height: 60px;
+          border: 2px solid $fade-grey;
+        }
+
+        .order__steps--icon {
+          width: 26px;
+          height: 26px;
+
+          @include mobileFirst(769) {
+            width: 31px;
+            height: 31px;
+          }
+        }
+      }
+
+      .order-steps__col--header {
+        font-weight: 500;
+        font-size: calculate-rem(16px);
+        letter-spacing: 0.03em;
+        color: $font-color;
+        @include margins(10px 0);
+
+        @include mobileFirst(769) {
+          font-size: calculate-rem(24px);
+          font-weight: 600;
+          @include margins(20px 0);
+          text-align: center;
+        }
+      }
+
+      .order-steps__col--details {
+        font-weight: 450;
+        font-size: calculate-rem(10px);
+        letter-spacing: 0.03em;
+        color: #c4c4c4;
+
+        @include mobileFirst(769) {
+          font-size: calculate-rem(19px);
+          font-weight: 500;
+          color: darken($color: #c4c4c4, $amount: 25%);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// ORDER STEPS STYLE ENDS
+
+// EXPLORE BEST SELLING
+.best-selling-wrap {
+  z-index: 1;
+  width: 100%;
+  @include paddings(41px 0 48px 0);
+  height: auto;
+  background-color: $light-tomato;
+
+  @include mobileFirst(769) {
+    background-image: url('../../assets/images/bitmaps/Food\ image\ transparent\ 1.png'),
+      url('../../assets/images/bitmaps/Food\ image\ transparent\ 2.png');
+    background-repeat: no-repeat;
+    background-position: -1px -30px, bottom right;
+    @include paddings(98px 0 72px 0);
+    height: 55rem;
+  }
+
+  .best-selling-slider-top {
+    width: 100%;
+    max-width: calc(100% - 62px);
+    margin: 0 auto;
+
+    .best-selling__header {
+      font-weight: 600;
+      font-size: calculate-rem(18px);
+      line-height: 154.1%;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $brick;
+
+      @include mobileFirst(769) {
+        font-weight: 700;
+        font-size: calculate-rem(36px);
+      }
+    }
+
+    .best-selling__details {
+      font-weight: 500;
+      font-size: calculate-rem(10px);
+      line-height: 154.1%;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: darken($color: $brick, $amount: 20%);
+      @include margins(11px 0 39px 0);
+
+      @include mobileFirst(769) {
+        font-size: calculate-rem(16px);
+        font-weight: 600;
+        @include margins(25px 0 63px 0);
+      }
+    }
+  }
+
+  .best-selling-slider--wrap {
+    width: 100%;
+    max-width: calc(100% - 46px);
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    display: flex;
+
+    @include mobileFirst(769) {
+      max-width: calc(100% - 420px);
+    }
+
+    .slider-icon--wrap {
+      cursor: pointer;
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        width: 64px;
+      }
+
+      .arrow-previous {
+        left: -3rem;
+      }
+
+      .arrow-next {
+        right: -3rem;
+      }
+    }
+
+    .slide-cards-wrap {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      overflow-x: scroll;
+      @include scrollbar-hide;
+
+      @include mobileFirst(769) {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-gap: 0 32px;
+        justify-content: center;
+      }
+
+      .slide__card {
+        background: $white;
+        @include border-radius(5px 5px 0px 0px);
+
+        .slide-image {
+          height: 200px;
+          max-height: 210px;
+          width: 100%;
+          max-width: 100%;
+          object-fit: cover;
+          object-position: center;
+          margin-bottom: 15px;
+          @include border-radius(5px 5px 0px 0px);
+
+          @include mobileFirst(769) {
+            height: 257px;
+            margin-bottom: 23px;
+          }
+        }
+
+        .restaurant-name-wrap {
+          width: 100%;
+          max-width: 100%;
+          @include row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          margin-bottom: 12px;
+
+          @include mobileFirst(769) {
+            padding: 0 20px;
+            margin-bottom: 19px;
+          }
+
+          .restaurant-name {
+            font-weight: 500;
+            line-height: 154.1%;
+            letter-spacing: 0.03em;
+            color: $font-color;
+            font-size: calculate-rem(13px);
+          }
+
+          .restaurant-icons {
+            .restaurant-icon {
+              &:not(:last-child) {
+                margin-right: 12px;
+              }
+            }
+          }
+        }
+
+        .rating-details-wrap {
+          width: 100%;
+          padding: 0 10px;
+          @include flex-space-between;
+
+          @include mobileFirst(769) {
+            padding: 0 20px;
+          }
+
+          .detail {
+            font-weight: 450;
+            font-size: calculate-rem(12px);
+            letter-spacing: 0.03em;
+            color: $font-color;
+          }
+
+          & .vertical-line {
+            border: 1px solid #e8eddf;
+            height: 20px;
+          }
+
+          .star-rating {
+            @include row;
+            align-items: center;
+
+            .rating-number {
+              margin-right: 3.8px;
+              padding-bottom: 0.2em;
+            }
+          }
+
+          .time-wrap {
+            @include row;
+            align-items: center;
+
+            .time {
+              margin-left: 5.6px;
+            }
+          }
+        }
+
+        .view-restaurant-btn-wrap {
+          @include flex-row;
+          margin-top: 14px;
+          padding-bottom: 10px;
+
+          @include mobileFirst(769) {
+            margin-top: 19px;
+            padding-bottom: 20px;
+          }
+
+          .view-restaurant-btn {
+            max-width: calc(100% - 20px);
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            font-weight: 450;
+            font-size: calculate-rem(12px);
+            letter-spacing: 0.03em;
+            color: $font-color;
+            @include row;
+            @include border-radius(2px);
+            @include btn-style(
+              $white,
+              $font-color,
+              100%,
+              45px,
+              1px solid #e8eddf
+            );
+
+            @include mobileFirst(769) {
+              font-size: calculate-rem(13px);
+              font-weight: 600;
+            }
+
+            .view-res-icon {
+              width: 20px;
+              height: 20px;
+              margin-left: 14.5px;
+
+              @include mobileFirst(769) {
+                width: 28px;
+                height: 28px;
+              }
+            }
+
+            @include mobileFirst(769) {
+              @include transition;
+
+              &:hover {
+                cursor: pointer;
+                border-color: $brand-color;
+                border-width: 2.5px;
+                font-size: calculate-rem(13.5px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // SLIDER BOX INDICATOR
+    .navigation-icons-wrap {
+      @include flex-row;
+      margin-top: 32px;
+
+      .box {
+        background: rgba(138, 81, 51, 0.1);
+        width: 5px;
+        height: 5px;
+
+        &:not(:last-of-type) {
+          margin-right: 15px;
+        }
+      }
+
+      .active {
+        background: $brick;
+      }
+    }
+
+    .arrow-navigation-wrap {
+      position: absolute;
+      width: 100%;
+      display: none;
+
+      @include mobileFirst(769) {
+        display: block;
+      }
+
+      .best-seller-arrow {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .arrow-previous {
+        left: 0;
+      }
+
+      .arrow-next {
+        right: 0;
+      }
+    }
+  }
+
+  .best-selling-indicators {
+    display: none;
+    visibility: hidden;
+
+    @include mobileFirst(769) {
+      width: 3%;
+      display: flex;
+      margin: 2rem auto;
+      visibility: visible;
+      justify-content: space-between;
+
+      .box {
+        width: 5px;
+        height: 5px;
+        background-color: $soft-grey;
+
+        &.active {
+          background-color: $brick;
+        }
+      }
+    }
+  }
+}
+
+// EXPLORE BEST SELLING ENDS
+
+// SET DELIVERY SECTION
+
+.set-delivery-wrap {
+  background: $white;
+  padding: 62px 0 38px 0;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mobileFirst(769) {
+    padding: 98px 0 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .content-box {
+    width: 100%;
+    max-width: calc(100% - 46px);
+    margin: 40px auto 0 auto;
+
+    @include mobileFirst(769) {
+      max-width: calc(50% - 233px);
+      margin: 0 105px 0 128px;
+      width: 50%;
+      margin-top: 6em;
+    }
+
+    .content-box__header {
+      font-weight: 500;
+      font-size: calculate-rem(18px);
+      letter-spacing: 0.03em;
+      line-height: 154.1%;
+      color: $dark-brand-color;
+      text-align: center;
+
+      @include mobileFirst(769) {
+        font-size: calculate-rem(26px);
+        text-align: left;
+      }
+
+      @include mobileFirst(1440) {
+        font-size: calculate-rem(36px);
+      }
+    }
+
+    .content-box__details {
+      font-weight: 450;
+      font-size: calculate-rem(12px);
+      line-height: 154.1%;
+      letter-spacing: 0.03em;
+      color: $font-color;
+      margin: 13px 0 12px 0;
+      text-align: center;
+
+      @include mobileFirst(769) {
+        margin: 16px 0 26px 0;
+        font-size: calculate-rem(16px);
+        text-align: left;
+      }
+    }
+
+    .content-box__btn {
+      @include box-shadow(0 5px 10px rgba($color: $brand-color, $alpha: 0.7));
+      @include btn-style($brand-color, $white, 100%, 55px, none);
+      @include border-radius(3px);
+      font-size: calculate-rem(18px);
+      font-weight: 450;
+      font-family: inherit;
+      background: lighten($color: $brand-color, $amount: 3%);
+
+      &:focus {
+        background: darken($color: $brand-color, $amount: 3%);
+        @include box-shadow(0 0 0 5px rgba($color: $brand-color, $alpha: 0.4));
+      }
+
+      @include mobileFirst(769) {
+        cursor: pointer;
+        @include transition;
+        box-shadow: none;
+
+        &:hover {
+          background: lighten($color: $brand-color, $amount: 3%);
+          @include box-shadow(
+            0 5px 15px rgba($color: $brand-color, $alpha: 0.7)
+          );
+        }
+
+        &:focus {
+          background: darken($color: $brand-color, $amount: 3%);
+          @include box-shadow(
+            0 0 0 5px rgba($color: $brand-color, $alpha: 0.4)
+          );
+        }
+      }
+    }
+  }
+
+  .slider-box {
+    height: 221px;
+    width: 100%;
+    max-width: calc(100% - 46px);
+    margin: 0 auto;
+
+    @include mobileFirst(769) {
+      width: 50%;
+      max-width: 50%;
+      margin: 0;
+    }
+
+    .slider {
+      max-width: 100%;
+      overflow: hidden;
+      @include border-radius(60px 0 60px 0);
+      position: relative;
+    }
+
+    .slides {
+      width: 100%;
+      position: relative;
+      transition: all linear 0.2s;
+      will-change: transform;
+    }
+
+    .slide {
+      float: left;
+      @include border-radius(60px 0 60px 0);
+    }
+
+    .slide img {
+      height: 230px;
+      max-height: 240px;
+      width: 100%;
+      user-select: none;
+      @include border-radius(60px 0 60px 0);
+      object-position: center;
+      object-fit: cover;
+
+      @include mobileFirst(769) {
+        width: 100%;
+        height: 450px;
+        max-height: 460px;
+      }
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 109px;
+      height: 41px;
+      background: $white;
+      display: flex;
+
+      @include mobileFirst(769) {
+        width: 206px;
+        height: 65px;
+      }
+
+      .vertical-line {
+        border-left: 1px solid $fade-grey;
+        height: 41px;
+        margin: 0 7px;
+
+        @include mobileFirst(769) {
+          height: 65px;
+        }
+      }
+
+      .prev,
+      .next {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        @include mobileFirst(769) {
+          cursor: pointer;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SET DELIVERY ENDS

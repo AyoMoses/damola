@@ -1,0 +1,273 @@
+// .checkout-wrapper {
+//   padding: 1.5rem;
+//   background: $grey;
+
+//   @include respond(laptop) {
+//     padding: 3.5rem;
+//   }
+// }
+
+// p,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// span,
+// label {
+//   color: $font-color;
+//   font-weight: lighter;
+// }
+
+// .header {
+//   margin-bottom: 1rem;
+
+//   @include respond(laptop) {
+//     margin-bottom: 2rem;
+//   }
+
+//   h2 {
+//     font-size: 1rem;
+
+//     @include respond(laptop) {
+//       font-size: 1.5rem;
+//     }
+//   }
+// }
+
+// .delivery-info-content {
+//   display: flex;
+//   flex-direction: column;
+
+//   @include respond(laptop) {
+//     display: grid;
+//     grid-template-columns: 40fr 2fr 25fr;
+//     grid-template-rows: 1fr;
+//   }
+// }
+
+// .delivery-info-wrapper {
+//   background-color: $brand-color;
+//   padding: 2rem;
+//   display: flex;
+//   flex-direction: column;
+//   background: $white;
+// }
+
+// button.checkout {
+//   border: none;
+//   cursor: pointer;
+//   background: $white;
+//   color: $brand-color;
+//   font-size: calculate-rem(16px);
+
+//   &:focus {
+//     outline: none;
+//   }
+
+//   &.inverted {
+//     width: 100%;
+//     color: white;
+//     padding: 1.5rem;
+//     border-radius: 5px;
+//     background: $brand-color;
+//   }
+// }
+
+// .uppercase {
+//   text-transform: uppercase;
+// }
+
+// .delivery-info {
+//   h3 {
+//     margin-bottom: 1rem;
+//   }
+// }
+
+// .horizontal-line {
+//   @include horizontal-line(1px, solid, $soft-grey, 100%);
+//   margin: 1rem 0;
+// }
+
+// .delivery-address-wrapper {
+//   display: flex;
+//   justify-content: space-between;
+
+//   p {
+//     font-size: calculate-rem(14px);
+
+//     @include mobileFirst(769) {
+//       font-size: calculate-rem(16px);
+//     }
+//   }
+// }
+
+// .header {
+//   p {
+//     font-size: 1.15rem;
+//     line-height: 2.5rem;
+//   }
+// }
+
+// .payment-method {
+//   &__options {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-template-rows: repeat(2, 1fr);
+
+//     @include respond(tab-port) {
+//       display: flex;
+//       flex-wrap: wrap;
+//     }
+//   }
+
+//   &__card {
+//     width: 7rem;
+//     padding: 10px;
+//     display: flex;
+//     cursor: pointer;
+//     font-size: 10px;
+//     color: $font-color;
+//     border-radius: 5px;
+//     align-items: center;
+//     margin-bottom: 1rem;
+//     border: 2px solid transparent;
+//     box-shadow: 0 1px 2px 0 $soft-grey;
+
+//     @include respond(tab-port) {
+//       width: 11rem;
+//       padding: 1rem;
+//       font-size: 1rem;
+//     }
+
+//     &:not(:first-child) {
+//       @include respond(tab-port) {
+//         margin-left: 1rem;
+//       }
+//     }
+
+//     svg {
+//       margin-right: 1rem;
+//       width: 18px;
+
+//       @include respond(tab-port) {
+//         width: 32px;
+//       }
+//     }
+
+//     &.selected {
+//       border: 2px solid $brand-color;
+//     }
+//   }
+// }
+
+// .creditcard-formGroup {
+//   margin: 2rem 0;
+
+//   & .input-group {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     margin: 1rem 0;
+
+//     &.row {
+//       flex-direction: column;
+
+//       @include respond(laptop) {
+//         flex-direction: row;
+//       }
+
+//       :not(:last-child) {
+//         margin-right: 0;
+
+//         @include respond(laptop) {
+//           margin-right: 2rem;
+//         }
+//       }
+
+//       .input-group {
+//         width: 100%;
+
+//         @include respond(laptop) {
+//           width: 35%;
+//         }
+//       }
+//     }
+
+//     label {
+//       margin-bottom: calculate-rem(5px);
+//     }
+//   }
+// }
+
+// input {
+//   padding: 1.5rem 1rem;
+//   border-radius: 5px;
+//   border: 1px solid $grey;
+//   color: $font-color;
+
+//   &:focus {
+//     outline: 1px solid $brand-color;
+//     border: 1px solid $brand-color;
+//   }
+// }
+
+// .order-summary-wrapper {
+//   background-color: white;
+//   padding: 2rem;
+
+//   .header {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
+
+// .order-list {
+//   max-height: 47rem;
+
+//   &__item {
+//     display: grid;
+//     grid-template-columns: 1fr 10fr 2fr 1fr;
+//     grid-template-rows: 1fr;
+//     margin: 1rem 0;
+
+//     .item-details {
+//       display: flex;
+//       // align-items: center;
+//       flex-direction: column;
+//       justify-content: flex-start;
+
+//       .item-extras {
+//         font-style: italic;
+//         margin-top: 4px;
+//         font-size: 0.75rem;
+//         color: $soft-grey;
+//       }
+//     }
+
+//     .cancel-button {
+//       display: flex;
+//     }
+//   }
+// }
+
+// .coupon-form {
+//   display: flex;
+
+//   input {
+//     flex: 5;
+//   }
+
+//   button {
+//     flex: 1;
+//   }
+// }
+
+// .order-summary__details {
+//   div {
+//     display: flex;
+//     margin: 1rem 0;
+//     justify-content: space-between;
+//   }
+// }

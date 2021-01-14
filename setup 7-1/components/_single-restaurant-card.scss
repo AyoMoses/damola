@@ -1,0 +1,196 @@
+.tab-card {
+    background: $white;
+    @include border-radius(0px 3px 3px 0px);
+    @include row;
+    height: 100%;
+    min-height: 45px;
+    max-height: 100px;
+    
+    @include mobileFirst(769) {
+        
+        height: 100%;
+        min-height: 91px;
+        max-height: 165px;
+
+    }
+
+    .card-image {
+        width: 80px;
+        height: auto;
+        object-position: center;
+        object-fit: cover;
+
+        @include min-max(769, 1200) {
+
+            width: 78px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @include mobileFirst(1201) {
+            width: 161px;
+            height: auto;
+        }
+    }
+
+    & .card-content {
+
+        padding: 9px 12px 12px 11px;
+        width: 100%;
+        @include column;
+        justify-content: center;
+
+        @include mobileFirst(1131) {
+            padding: 22px 38px 22px 22px;
+        }
+
+        @include min-max(769, 1130) {
+
+            padding: 22px 20px 22px 15px;
+        }
+
+        .card-content-header-wrap {
+
+            width: 100%;
+            @include flex-space-between;
+
+            .card-content-header {
+                font-weight: 600;
+                font-size: calculate-rem(10px);
+                line-height: 154.1%;
+                letter-spacing: 0.03em;
+                text-transform: capitalize;
+                color: $font-color;
+
+                @include mobileFirst(769) {
+                    font-size: calculate-rem(16px);
+                }
+            }
+
+            .open-single-product-btn {
+
+                font-weight: 500;
+                font-size: 10px;
+                text-align: right;
+                letter-spacing: 0.05em;
+                text-decoration-line: underline;
+                color: $brand-color;
+                @include btn-style(transparent, $brand-color, auto, auto, none);
+
+                @include min-max(320, 374) {
+
+                    font-size: 7px;
+                }
+
+                @include mobileFirst(769) {
+
+                    font-size: 12px;
+                    cursor: pointer;
+
+                    &:hover {
+
+                        text-decoration: none;
+                        color: darken($color: $brand-color, $amount: 10%);
+                    }
+                }
+            }
+        }
+
+        .card-details {
+
+            font-weight: 300;
+            font-size: calculate-rem(9px);
+            line-height: 154.1%;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            color: $font-color;
+            margin: 7px 0;
+            @include line-clamp(2);
+
+            @include min-max(769, 1130) {
+
+                font: calculate-rem(8px);
+            }
+
+            @include mobileFirst(1131) {
+                font-size: calculate-rem(14px);
+                margin: 14px 0;
+                width: 80%;
+                text-align: left;
+            }
+
+        }
+
+        .order-options-modal-links-wrap {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .order-options-modal__inner {
+
+                display: flex;
+                align-items: center;
+
+
+                .option-modalopen-btn {
+
+                    font-weight: 500;
+                    font-size: calculate-rem(10px);
+                    letter-spacing: 0.05em;
+                    @include transition-color;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    @include btn-style(transparent, $brand-color, auto, auto, none);
+
+                    &:hover {
+                        color: darken($color: $brand-color, $amount: 10%);
+                        text-decoration: none;
+                    }
+
+                    @include min-max(320, 374) {
+
+                        font-size: 7px;
+                    }
+
+                    @include mobileFirst(1081) {
+
+                        font-size: calculate-rem(12px);
+
+                    }
+                }
+
+                & .vertical-line {
+
+                    @include vertical-line(1px, $fade-grey, solid, 15px);
+                    margin-left: 8px;
+                    margin-right: 9px;
+
+                    @include mobileFirst(1081) {
+                        margin-left: 18px;
+                        margin-right: 19px;
+                    }
+                }
+            }
+
+            .card-amount {
+
+                font-weight: 600;
+                font-size: calculate-rem(8px);
+                letter-spacing: 0.05em;
+                color: $font-color;
+
+                @include min-max(769, 880) {
+
+                    font-size: calculate-rem(10px);
+                }
+
+                @include mobileFirst(1081) {
+                    font-size: calculate-rem(18px);
+                }
+            }
+
+        }
+    }
+}

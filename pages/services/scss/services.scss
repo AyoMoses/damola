@@ -1,0 +1,178 @@
+@import '../../../styles/global.scss';
+
+
+.services-hero-wrap {
+
+    background: url('../../../assets/bitmaps/t.png') $brand-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    width: 100%;
+    max-width: 100%;
+
+    @include mobileFirst(769) {
+
+        height: 70vh;
+   
+    }
+
+    .hero-text {
+
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 27px;
+        letter-spacing: -0.015em;
+        color: $white;
+        @include flex-row;
+        width: 100%;
+        height: 100%;
+        padding: 0 2.5em;
+
+        @include mobileFirst(769) {
+
+            font-weight: 600;
+            font-size: 2.375rem;
+            line-height: 72px;
+            letter-spacing: -0.015em;
+            justify-content: flex-start;
+            padding: 0 18em 0 1.5em;
+            
+        }
+
+        
+    }
+}
+
+
+.services-wrap {
+
+    padding: 1.875em;
+
+    @include mobileFirst(769) {
+
+        padding: 1.875em 0 2em 0;
+        width: 100%;
+        max-width: calc(100% - 23%);
+        margin: 0 auto;
+    }
+
+    @include mobileFirst(1367) {
+
+        padding: 1.875em 0 2em 0;
+        width: 100%;
+        max-width: calc(100% - 30%);
+        margin: 0 auto;
+    }
+
+    @include mobileFirst(1599) {
+
+        padding: 1.875em 0 2em 0;
+        width: 100%;
+        max-width: calc(100% - 45%);
+        margin: 0 auto;
+    }
+
+
+    .service--section {
+
+        &:not(:first-child) {
+
+            margin-bottom: 2em;
+        }
+
+        @include mobileFirst(769) {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 300px;
+
+
+            &:nth-child(even) {
+
+                display: flex;
+                flex-flow: row-reverse;
+            }
+        }
+
+        .service-icon-wrap {
+
+            @include flex-row;
+
+            .service-icon {
+    
+                width: 200px;
+                
+    
+                @include mobileFirst(769) {
+    
+                    max-width: 300px;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+
+
+        .service-details {
+
+            @include mobileFirst(769) {
+
+                max-width: 500px;
+                margin-right: 3em;
+
+            }
+
+            .service-header {
+
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 36px;
+                text-align: center;
+                letter-spacing: -0.015em;
+                color: $font-color;
+                margin-bottom: 1em;
+
+                @include mobileFirst(769) {
+
+                    font-weight: bold;
+                    font-size: 2rem;
+                    line-height: 0;
+                    letter-spacing: -0.015em;
+                    color: $font-color;
+                    text-align: left;
+                }
+            }
+
+            .text-right {
+
+                @include mobileFirst(769) {
+
+                    text-align: right !important;
+                }
+            }
+
+            .service-detail {
+
+                font-weight: normal;
+                font-size: 0.875rem;
+                line-height: 34px;
+                text-align: center;
+                letter-spacing: -0.015em;
+                color: $font-rgba;
+
+                @include mobileFirst(768) {
+
+                    font-weight: normal;
+                    font-size: .95rem;
+                    line-height: 2;
+                    letter-spacing: -0.015em;
+                    color: $font-rgba;
+                    text-align: left;
+
+                }
+            }
+        }
+    }
+}

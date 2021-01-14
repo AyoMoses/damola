@@ -1,0 +1,143 @@
+.payment-p-wrapper {
+
+    width: 100vw;
+    height: 100vh;
+    background: $semi-light-grey;
+
+    .payment-p__inner {
+
+        @include double-layer;
+        padding-top: 22px;
+
+        @include mobileFirst(769) {
+
+            padding-top: 34px;
+
+        }
+
+        .payment-back-arrow-wrap {
+
+            @include row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 21px;
+
+            @include mobileFirst(769) {
+
+                margin-bottom: 35px;
+
+            }
+
+            .payment-arrow__link {
+
+                margin-right: 21px;
+                align-self: center;
+                display: flex;
+
+                @include mobileFirst(769) {
+
+                    @include backface-visibility(hidden);
+                    @include trans(.2s);
+
+                    &:hover {
+
+                        @include scale(2.2);
+                    }
+                }
+            }
+
+            .payment-back-to-shop {
+
+                font-weight: 400;
+                font-size: calculate-rem(18px);
+                color: $font-color;
+
+            }
+        }
+
+        // CARD FOR PAYMENT
+        .payment-card-wrap {
+
+            @include flex-row;
+            width: 100%;
+            height: auto;
+            background: $white;
+            @include border-radius(3px);
+
+            @include mobileFirst(769) {
+
+                width: 40vw;
+                height: auto;
+                margin: 0 auto;
+
+            }
+
+            .payment-card__inner {
+
+                @include column;
+                align-content: center;
+                justify-content: center;
+                padding: 43px 19px 44px 20px;
+
+                @include mobileFirst(769) {
+
+                    padding: 48px 74px 48px 75px;
+
+                }
+
+                .payment-icon {
+
+                    margin: 0 auto;
+                    height: 70px;
+                    width: 70px;
+
+                    @include mobileFirst(769) {
+
+                        height: 100px;
+                        width: 100px;
+                        @include trans(.2s);
+                        @include scale-animation(.7, 1);
+                        animation-name: scale-animation;
+                        animation-duration: 1.2s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                    }
+                }
+
+                .payment-card__header {
+
+                    font-weight: 400;
+                    font-size: calculate-rem(16px);
+                    text-align: center;
+                    color: $font-color;
+                    margin-top: 25px;
+                    margin-bottom: 11px;
+
+                    @include mobileFirst(769) {
+
+                        font-size: calculate-rem(24px);
+                        margin: 27px 0;
+
+                    }
+                }
+
+                .payment-card__details {
+
+                    font-weight: 300;
+                    font-size: calculate-rem(12px);
+                    text-align: center;
+                    color: $font-color;
+                    width: 100%;
+                    max-width: 80%;
+                    margin: 0 auto;
+
+                    @include mobileFirst(769) {
+
+                        font-size: calculate-rem(14px);
+
+                    }
+                }
+            }
+        }
+    }
+}
