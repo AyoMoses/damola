@@ -1,9 +1,12 @@
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
 :root {
   font-size: 1rem;
-  box-sizing: border-box;
-
   -webkit-box-sizing: border-box;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 
   ::-webkit-scrollbar {
     width: 4.5px;

@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-size: 1rem;
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 :root ::-webkit-scrollbar {
   width: 4.5px;
   border: 1px solid #000000;
-  border-radius: .8em;
+  border-radius: 0.8em;
 }
 
 :root ::-webkit-scrollbar-track {
@@ -40,21 +43,15 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'CircularStd';
   font-size: 1rem;
-}
-
-.fonts-failed body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.fonts-failed h1,
-.fonts-failed h2,
-.fonts-failed h3,
-.fonts-failed h4,
-.fonts-failed h5,
-.fonts-failed h6 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  direction: rtl;
+  /* update text-align value to right;  on latin screens*/
+  direction: ltr;
+  /* update text-align value to left; on latin screens*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul,
@@ -69,7 +66,7 @@ a {
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'CircularStd';
   color: #000000;
 }
 
@@ -88,23 +85,51 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat';
+  font-family: 'CircularStd';
+}
+
+.fonts-failed body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.fonts-failed h1,
+.fonts-failed h2,
+.fonts-failed h3,
+.fonts-failed h4,
+.fonts-failed h5,
+.fonts-failed h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 @font-face {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'CircularStd';
   font-style: normal;
-  font-weight: 400;
-  src: local("Montserrat"), local("Montserrat"), url(https://fonts.gstatic.com/montserrat.woff2) format("woff2"), url(https://fonts.gstatic.com/montserrat.woff) format("woff");
+  font-weight: lighter;
+  src: url("../../assets/font/CircularStd-Book.ttf") format("truetype");
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  src: local("Montserrat"), local("Montserrat"), url(https://fonts.gstatic.com/montserrat.woff2) format("woff2"), url(https://fonts.gstatic.com/montserrat.woff) format("woff");
-  font-display: swap;
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 48.0625em) {
+  .page-wrapper {
+    padding-top: 70px;
+  }
+}
+
+.page-wrapper .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .page-content-wrapper {
@@ -173,11 +198,6 @@ h6 {
   background: #00E0C7;
   top: 17px;
   right: 20px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 
 .header .menu-icon .navicon {
@@ -300,11 +320,11 @@ h6 {
     font-weight: 500;
     font-size: 1rem;
     text-transform: uppercase;
-    transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     cursor: pointer;
   }
   .header .menu .menu-item .menu-link:hover {
@@ -405,11 +425,11 @@ h6 {
 
 @media screen and (min-width: 48.0625em) {
   .footer-wrap .footer-top .links-wrap .footer-link-item .footer-link {
-    transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
   }
   .footer-wrap .footer-top .links-wrap .footer-link-item .footer-link:hover {
     color: #00E0C7;
