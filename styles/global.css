@@ -11,7 +11,7 @@ html:focus-within {
 
 :root ::-webkit-scrollbar {
   width: 4.5px;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   border-radius: 0.8em;
 }
 
@@ -21,7 +21,7 @@ html:focus-within {
 }
 
 :root ::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 *,
@@ -66,7 +66,6 @@ a {
 
 p {
   font-family: 'lineto-circular-pro';
-  color: #000000;
 }
 
 img {
@@ -74,17 +73,6 @@ img {
   outline: none;
   max-width: 100%;
   height: auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  font-family: 'lineto-circular-pro';
 }
 
 @font-face {
@@ -104,6 +92,17 @@ h6 {
 .fonts-failed h5,
 .fonts-failed h6 {
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Serif Display', serif;
 }
 
 .page-wrapper {
