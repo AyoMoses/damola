@@ -11,11 +11,9 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-// FONT-FACE CIRUCLAR STD
+// FONT-FACE 
 @font-face {
-    font-family: 'CircularStd';
-    font-style: normal;
-    font-weight: lighter;
-    src: url('../../assets/font/CircularStd-Book.ttf') format('truetype');
+    font-family: 'lineto-circular-pro';
+    src: url('/assets/font/lineto-circular-pro-book.ttf') format('truetype');
     font-display: swap;
 }
