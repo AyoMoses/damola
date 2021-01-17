@@ -86,6 +86,12 @@ h6 {
   font-family: 'lineto-circular-pro';
 }
 
+@font-face {
+  font-family: 'lineto-circular-pro';
+  src: url("/assets/font/lineto-circular-pro-book.ttf") format("truetype");
+  font-display: swap;
+}
+
 .fonts-failed body {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -97,12 +103,6 @@ h6 {
 .fonts-failed h5,
 .fonts-failed h6 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-@font-face {
-  font-family: 'lineto-circular-pro';
-  src: url("/assets/font/lineto-circular-pro-book.ttf") format("truetype");
-  font-display: swap;
 }
 
 .page-wrapper {
