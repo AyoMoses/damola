@@ -1,202 +1,158 @@
-// HEADER STYLES
 /* header */
 
-.myFixedMenu-box-shadow {
-    width: 100%;
-    box-shadow: 0px 3px 5px rgba(225, 225, 225, .4);
-}
-
 .header {
-    background-color: red;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto 0 0;
-    position: fixed;
-    width: 100%;
-    height: 75px;
-
-    .brand-logo {
-
-        width: 50px;
-        height: auto;
-        margin: .6em 0 .5em 1em;
-    }
-
-    .menu {
-
-        .menu-item {
-
-            padding: 2em 0;
-
-            .menu-link {
-
-                color: green;
-                font-weight: 500;
-                font-size: 1.125rem;
-                text-transform: uppercase;
-            }
-        }
-    }
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 1.25rem;
+  font-weight: 900;
+  padding: 10px 20px;
+  text-decoration: none;
+}
 
 /* menu */
 
 .header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    display: none;
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.45s ease-out;
+  -webkit-transition: max-height 0.45s ease-out;
+  -moz-transition: max-height 0.45s ease-out;
+  -ms-transition: max-height 0.45s ease-out;
+  -o-transition: max-height 0.45s ease-out;
 }
 
 /* menu icon */
 
 .header .menu-icon {
-    cursor: pointer;
-    float: right;
-    padding: 18px 10px;
-    position: relative;
-    user-select: none;
-    background: $brand-color;
-    top: 17px;
-    right: 20px;
-    @include radius-3px;
-
+  cursor: pointer;
+  //   display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header .menu-icon .navicon {
-    background: $white;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
+//   background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 20px;
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-    background: $white;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
 }
 
 .header .menu-icon .navicon:before {
-    top: 5px;
+  top: 8;
 }
 
 .header .menu-icon .navicon:after {
-    top: -5px;
+  top: -8px;
 }
 
 /* menu btn */
 
 .header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//remove bug when menu is not checked to remove showing menu on left side of menu pane
+.menu-btn:not(:checked) ~ .menu {
     display: none;
-    z-index: 30;
 }
 
-// WHEN MENU IS CHECKED ON MOBILE
-.header .menu-btn:checked~.menu {
-    max-height: 65vh;
-    height: 65vh;
-    background: $brand-color;
-    color: $white;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-    padding-top: 50px;
-    display: block;
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon {
-    background: transparent;
-    z-index: 30;
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-46deg);
+  -webkit-transform: rotate(-46deg);
+  -moz-transform: rotate(-46deg);
+  -ms-transform: rotate(-46deg);
+  -o-transform: rotate(-46deg);
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:before {
-    transform: rotate(-45deg);
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:after {
-    transform: rotate(45deg);
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }
 
-// BUTTON TURN TO X AFTER CLICK
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-    top: 0;
-    background: $white;
-}
+/* 48em = 768px */
 
-/* 48em = 769px */
-
-@media (min-width: 49em) {
-
-    .header {
-
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: calc(100% - 3.5px);
-        margin: 0 auto 0 0;
-        height: 65px;
-        background: $white;
-        z-index: 100;
-
-        .brand-logo {
-
-            width: 50px;
-            height: auto;
-            margin: .6em 0 .5em 4.4975em;
-        }
-
-        .menu-btn {
-
-            display: none;
-        }
-
-        .menu-icon {
-
-            display: none;
-        }
-
-        .menu {
-
-            @include flex-row;
-            padding: 0;
-            z-index: 90;
-
-            .menu-item {
-
-                padding: 0 2.0625em;
-                margin-bottom: 75px;
-
-                .menu-link {
-
-                    color: $brand-color-dark;
-                    font-weight: 500;
-                    font-size: 1rem;
-                    text-transform: uppercase;
-                    @include transition;
-                    cursor: pointer;
-
-                    &:hover {
-
-                        color: lighten($color: $brand-color, $amount: 5%);
-                    }
-
-                    &:focus {
-
-                        color: darken($color: $brand-color-dark, $amount: 3%);
-                    }
-                }
-            }
-        }
-    }
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
