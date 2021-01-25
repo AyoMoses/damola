@@ -6,7 +6,7 @@ a {
 
 .header-wrap {
   width: 100%;
-  max-width: calc(100% - 128px);
+  max-width: calc(100% - 160px);
   margin: 0 auto;
 
   @include deskTopFirst(900) {
@@ -20,7 +20,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: calc(100% - 128px);
+  max-width: calc(100% - 160px);
   margin: 0 auto;
   margin-top: 64px;
 
@@ -42,7 +42,7 @@ a {
 .header li a {
   display: flex;
   font-size: 1rem;
-  
+
   @include deskTopFirst(900) {
     padding: 2em 0.5em;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -60,8 +60,40 @@ a {
       }
     }
   }
+  .link-one,
+  .link-two,
+  .link-three {
+    transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+  }
+  .link-one {
+  
+    &:hover {
+      color: $card-bg;
+    }
+  }
+  .link-two {
+    &:hover {
+      color: $card-bg-2;
+    }
+  }
+  .link-three {
+    &:hover {
+      color: $card-bg-3;
+    }
+  }
 }
 
+.n {
+  transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+}
 
 .header .logo {
   display: block;
@@ -70,7 +102,7 @@ a {
   font-weight: bold;
   padding: 0;
   text-decoration: none;
-  
+
   @include deskTopFirst(900) {
     margin-left: 24px;
   }
