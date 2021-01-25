@@ -63,14 +63,17 @@ a {
   .link-one,
   .link-two,
   .link-three {
-    transition: color 0.2s ease-in-out;
-    -webkit-transition: color 0.2s ease-in-out;
-    -moz-transition: color 0.2s ease-in-out;
-    -ms-transition: color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+
+    &:hover {
+      font-weight: 800;
+    }
   }
   .link-one {
-  
     &:hover {
       color: $card-bg;
     }
