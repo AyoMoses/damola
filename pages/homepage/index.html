@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#00E0C7">
 
     <link rel="stylesheet" href="./scss/style.css" type="text/css" media="screen">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
     <title>Homepage</title>
@@ -25,13 +26,15 @@
 
     <header class="header-wrap">
         <nav class="header">
-            <a href="" class="logo">Damola.</a>
+            <a href="" class="logo" data-aos="fade-right" data-aos-offset="800" data-aos-easing="ease-in-sine">Damola.</a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn" id="menu-icon"><span class="navicon"></span></label>
             <ul class="menu" id="menu">
-                <li><a class="link-one" href="#work">work</a></li>
-                <li><a class="link-two" href="#about">about</a></li>
-                <li><a class="link-three" href="#contact">contact</a></li>
+                <li data-aos="fade-left" data-aos-offset="600" data-aos-easing="ease-in-sine"><a class="link-one"
+                        href="#work">work</a></li>
+                <li><a data-aos="fade-left" data-aos-offset="700" data-aos-easing="ease-in-sine" class="link-two" href="#about">about</a></li>
+                <li><a data-aos="fade-left" data-aos-offset="800" data-aos-easing="ease-in-sine" class="link-three"
+                        href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +44,11 @@
 
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="index.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
