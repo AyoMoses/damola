@@ -1,5 +1,5 @@
 a {
-  color: #000;
+  color: $white;
 }
 
 /* header */
@@ -14,7 +14,6 @@ a {
   }
 }
 .header {
-  background-color: #fff;
   position: fixed;
   z-index: 3;
   display: flex;
@@ -38,7 +37,6 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .header li a {
@@ -64,10 +62,6 @@ a {
   }
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
 
 .header .logo {
   display: block;
@@ -125,7 +119,7 @@ a {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: $white;
   content: '';
   display: block;
   height: 100%;

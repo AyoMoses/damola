@@ -130,7 +130,7 @@ h6 {
 }
 
 a {
-  color: #000;
+  color: #ffffff;
 }
 
 /* header */
@@ -147,7 +147,6 @@ a {
 }
 
 .header {
-  background-color: #fff;
   position: fixed;
   z-index: 3;
   display: -webkit-box;
@@ -179,7 +178,6 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .header li a {
@@ -205,11 +203,6 @@ a {
   .menu li:not(:last-child) {
     padding-right: 0;
   }
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
 }
 
 .header .logo {
@@ -276,7 +269,7 @@ a {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #ffffff;
   content: '';
   display: block;
   height: 100%;
