@@ -128,6 +128,10 @@ h6 {
           flex: 1;
 }
 
+a {
+  color: #000;
+}
+
 /* header */
 .header {
   background-color: #fff;
@@ -149,8 +153,6 @@ h6 {
 .header li a {
   display: block;
   padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
 }
 
 .header li a:hover,
@@ -161,8 +163,8 @@ h6 {
 .header .logo {
   display: block;
   float: left;
-  font-size: 1.25rem;
-  font-weight: 900;
+  font-size: 1.5rem;
+  font-weight: bold;
   padding: 10px 20px;
   text-decoration: none;
 }
@@ -171,11 +173,26 @@ h6 {
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height 0.45s ease-out;
-  -webkit-transition: max-height 0.45s ease-out;
-  -moz-transition: max-height 0.45s ease-out;
-  -ms-transition: max-height 0.45s ease-out;
-  -o-transition: max-height 0.45s ease-out;
+  transition: max-height 0.50s ease-in;
+  -webkit-transition: max-height 0.50s ease-in;
+  -moz-transition: max-height 0.50s ease-in;
+  -ms-transition: max-height 0.50s ease-in;
+  -o-transition: max-height 0.50s ease-in;
+}
+
+@media screen and (max-width: 56.25em) {
+  .header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /* menu icon */
@@ -191,11 +208,12 @@ h6 {
 }
 
 .header .menu-icon .navicon {
+  background: #333;
   display: block;
   height: 2px;
   position: relative;
-  -webkit-transition: background 0.2s ease-out;
-  transition: background 0.2s ease-out;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
   width: 20px;
 }
 
@@ -206,16 +224,16 @@ h6 {
   display: block;
   height: 100%;
   position: absolute;
-  transition: all 0.2s ease-out;
+  transition: all 0.45s ease-out;
   width: 100%;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.45s ease-out;
+  -moz-transition: all 0.45s ease-out;
+  -ms-transition: all 0.45s ease-out;
+  -o-transition: all 0.45s ease-out;
 }
 
 .header .menu-icon .navicon:before {
-  top: 8;
+  top: 8px;
 }
 
 .header .menu-icon .navicon:after {
@@ -228,21 +246,8 @@ h6 {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.menu-btn:not(:checked) ~ .menu {
-  display: none;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -250,19 +255,13 @@ h6 {
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-46deg);
-  -webkit-transform: rotate(-46deg);
-  -moz-transform: rotate(-46deg);
-  -ms-transform: rotate(-46deg);
-  -o-transform: rotate(-46deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
