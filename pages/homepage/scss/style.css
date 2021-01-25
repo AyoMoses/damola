@@ -136,7 +136,7 @@ a {
 /* header */
 .header-wrap {
   width: 100%;
-  max-width: calc(100% - 160px);
+  max-width: calc(100% - 128px);
   margin: 0 auto;
 }
 
@@ -159,7 +159,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: calc(100% - 160px);
+  max-width: calc(100% - 128px);
   margin: 0 auto;
   margin-top: 64px;
 }

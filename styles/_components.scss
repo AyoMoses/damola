@@ -6,7 +6,7 @@ a {
 
 .header-wrap {
   width: 100%;
-  max-width: calc(100% - 160px);
+  max-width: calc(100% - 128px);
   margin: 0 auto;
 
   @include deskTopFirst(900) {
@@ -20,7 +20,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: calc(100% - 160px);
+  max-width: calc(100% - 128px);
   margin: 0 auto;
   margin-top: 64px;
 
