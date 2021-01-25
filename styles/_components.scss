@@ -98,6 +98,15 @@ a {
   padding: 0;
   text-decoration: none;
 
+  &:hover {
+    color: $card-bg;
+    background: linear-gradient(to right, #C84E89,  #BF5AE0);
+    background: -webkit-linear-gradient(to right, #C84E89,  #BF5AE0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   @include deskTopFirst(900) {
     margin-left: 24px;
   }

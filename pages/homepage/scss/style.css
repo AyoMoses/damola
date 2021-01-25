@@ -242,6 +242,16 @@ a {
   text-decoration: none;
 }
 
+.header .logo:hover {
+  color: #C84E89;
+  background: -webkit-gradient(linear, left top, right top, from(#C84E89), to(#BF5AE0));
+  background: linear-gradient(to right, #C84E89, #BF5AE0);
+  background: -webkit-linear-gradient(to right, #C84E89, #BF5AE0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media screen and (max-width: 56.25em) {
   .header .logo {
     margin-left: 24px;
