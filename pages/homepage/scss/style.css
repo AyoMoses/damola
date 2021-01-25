@@ -51,6 +51,7 @@ body {
   /* update text-align value to left; on latin screens*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0d0d0f;
 }
 
 ul,
