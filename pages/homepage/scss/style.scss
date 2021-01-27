@@ -1,1 +1,37 @@
 @import '../../../styles/global.scss';
+
+.hero-section {
+  width: 100%;
+  &__inner {
+    height: 300px;
+    background-color: red;
+    width: 100%;
+    max-width: calc(100% - 160px);
+    margin: 0 auto;
+    margin-top: 248px;
+
+    @include deskTopFirst(900) {
+      max-width: calc(100% - 48px);
+      margin: 0 auto;
+      margin-top: 148px;
+    }
+
+    .hero-section--content {
+      .hello-text-wrap {
+        .hello-icon {
+        }
+      }
+
+      .hero-header {
+      }
+
+      .hero-sub-text {
+        .to-current-work-link {
+        }
+      }
+
+      .resume-link {
+      }
+    }
+  }
+}

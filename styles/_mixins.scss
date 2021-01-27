@@ -304,13 +304,13 @@
 
 @mixin double-layer {
   width: 100%;
-  max-width: calc(100% - 24px);
+  max-width: calc(100% - 48px);
   margin: 0 auto;
 
-  @include mobileFirst(769) {
+  @include mobileFirst(900) {
 
     width: 100%;
-    max-width: calc(100% - 244px);
+    max-width: calc(100% - 160px); //244px
     margin: 0 auto;
   }
 }
