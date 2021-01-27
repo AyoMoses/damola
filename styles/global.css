@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap");
+@-webkit-keyframes slide-bg {
+  0% {
+    background-position-x: -2000px;
+  }
+}
+@keyframes slide-bg {
+  0% {
+    background-position-x: -2000px;
+  }
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -234,15 +245,15 @@ a {
   }
 }
 
-.menu .link-one:hover {
+.menu .link-one:hover, .menu .link-one:active, .menu .link-one:focus {
   color: #C84E89;
 }
 
-.menu .link-two:hover {
+.menu .link-two:hover, .menu .link-two:active, .menu .link-two:focus {
   color: #2193B0;
 }
 
-.menu .link-three:hover {
+.menu .link-three:hover, .menu .link-three:active, .menu .link-three:focus {
   color: #BF5AE0;
 }
 
@@ -255,7 +266,7 @@ a {
   text-decoration: none;
 }
 
-.header .logo:hover {
+.header .logo:hover, .header .logo:focus {
   color: #C84E89;
   background: -webkit-gradient(linear, left top, right top, from(#c84e89), to(#bf5ae0));
   background: linear-gradient(to right, #c84e89, #bf5ae0);

@@ -79,17 +79,23 @@ a {
     }
   }
   .link-one {
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       color: $card-bg;
     }
   }
   .link-two {
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       color: $card-bg-2;
     }
   }
   .link-three {
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       color: $card-bg-3;
     }
   }
@@ -103,7 +109,8 @@ a {
   padding: 0;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $card-bg;
     background: linear-gradient(to right, #c84e89, #bf5ae0);
     background: -webkit-linear-gradient(to right, #c84e89, #bf5ae0);

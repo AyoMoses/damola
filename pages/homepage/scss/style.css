@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap");
+@-webkit-keyframes slide-bg {
+  100% {
+    background-position: -5000px 20%;
+  }
+}
+@keyframes slide-bg {
+  100% {
+    background-position: -5000px 20%;
+  }
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -234,15 +245,15 @@ a {
   }
 }
 
-.menu .link-one:hover {
+.menu .link-one:hover, .menu .link-one:active, .menu .link-one:focus {
   color: #C84E89;
 }
 
-.menu .link-two:hover {
+.menu .link-two:hover, .menu .link-two:active, .menu .link-two:focus {
   color: #2193B0;
 }
 
-.menu .link-three:hover {
+.menu .link-three:hover, .menu .link-three:active, .menu .link-three:focus {
   color: #BF5AE0;
 }
 
@@ -255,7 +266,7 @@ a {
   text-decoration: none;
 }
 
-.header .logo:hover {
+.header .logo:hover, .header .logo:focus {
   color: #C84E89;
   background: -webkit-gradient(linear, left top, right top, from(#c84e89), to(#bf5ae0));
   background: linear-gradient(to right, #c84e89, #bf5ae0);
@@ -730,11 +741,23 @@ template {
   display: none;
 }
 
-.hero-section {
+.hero-section-wrap {
   width: 100%;
+  background: url(../../../assets/bitmaps/hero-BG-Image.svg);
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  animation: 50s slide-bg infinite linear;
+  -webkit-animation: 50s slide-bg infinite linear;
 }
 
-.hero-section__inner {
+@media screen and (max-width: 56.25em) {
+  .hero-section-wrap {
+    animation: 30s slide-bg infinite linear;
+    -webkit-animation: 30s slide-bg infinite linear;
+  }
+}
+
+.hero-section-wrap .hero-section__inner {
   height: 70vh;
   width: 100%;
   max-width: calc(100% - 160px);
@@ -743,14 +766,15 @@ template {
 }
 
 @media screen and (max-width: 56.25em) {
-  .hero-section__inner {
+  .hero-section-wrap .hero-section__inner {
     max-width: calc(100% - 48px);
     margin: 0 auto;
     margin-top: 148px;
+    height: 100%;
   }
 }
 
-.hero-section__inner .hero-section--content .hello-text-wrap {
+.hero-section-wrap .hero-section__inner .hero-section--content .hello-text-wrap {
   font-size: 0.8125rem;
   color: #999999;
   text-transform: uppercase;
@@ -761,11 +785,11 @@ template {
   text-align: left;
 }
 
-.hero-section__inner .hero-section--content .hello-text-wrap .hello-icon {
+.hero-section-wrap .hero-section__inner .hero-section--content .hello-text-wrap .hello-icon {
   margin-left: 0.5em;
 }
 
-.hero-section__inner .hero-section--content .hero-header {
+.hero-section-wrap .hero-section__inner .hero-section--content .hero-header {
   color: #ffffff;
   font-weight: normal;
   font-size: 3rem;
@@ -779,7 +803,7 @@ template {
 }
 
 @media screen and (max-width: 56.25em) {
-  .hero-section__inner .hero-section--content .hero-header {
+  .hero-section-wrap .hero-section__inner .hero-section--content .hero-header {
     font-size: 1.75rem;
     line-height: 38px;
     margin-top: 1rem;
@@ -787,7 +811,7 @@ template {
   }
 }
 
-.hero-section__inner .hero-section--content .hero-sub-text {
+.hero-section-wrap .hero-section__inner .hero-section--content .hero-sub-text {
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
   color: #bfbfbf;
@@ -800,29 +824,29 @@ template {
 }
 
 @media screen and (max-width: 56.25em) {
-  .hero-section__inner .hero-section--content .hero-sub-text {
+  .hero-section-wrap .hero-section__inner .hero-section--content .hero-sub-text {
     max-width: 50%;
   }
 }
 
 @media screen and (max-width: 36.25em) {
-  .hero-section__inner .hero-section--content .hero-sub-text {
+  .hero-section-wrap .hero-section__inner .hero-section--content .hero-sub-text {
     max-width: 90%;
   }
 }
 
 @media screen and (max-width: 22.5em) {
-  .hero-section__inner .hero-section--content .hero-sub-text {
+  .hero-section-wrap .hero-section__inner .hero-section--content .hero-sub-text {
     max-width: 97%;
   }
 }
 
-.hero-section__inner .hero-section--content .hero-sub-text .to-current-work-link {
+.hero-section-wrap .hero-section__inner .hero-section--content .hero-sub-text .to-current-work-link {
   color: #999999;
   text-decoration: underline;
 }
 
-.hero-section__inner .hero-section--content .resume-link {
+.hero-section-wrap .hero-section__inner .hero-section--content .resume-link {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
@@ -839,7 +863,7 @@ template {
   color: #ffffff;
 }
 
-.hero-section__inner .hero-section--content .resume-link .resume-icon {
+.hero-section-wrap .hero-section__inner .hero-section--content .resume-link .resume-icon {
   margin-left: 8px;
 }
 /*# sourceMappingURL=style.css.map */

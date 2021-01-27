@@ -1,8 +1,18 @@
 @import '../../../styles/global.scss';
 
-.hero-section {
+.hero-section-wrap {
   width: 100%;
-  &__inner {
+  background: url(../../../assets/bitmaps/hero-BG-Image.svg);
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  animation: 50s slide-bg infinite linear;
+  -webkit-animation: 50s slide-bg infinite linear;
+
+  @include deskTopFirst(900) {
+    animation: 30s slide-bg infinite linear;
+    -webkit-animation: 30s slide-bg infinite linear;
+  }
+  .hero-section__inner {
     height: 70vh;
     width: 100%;
     max-width: calc(100% - 160px);
@@ -13,6 +23,7 @@
       max-width: calc(100% - 48px);
       margin: 0 auto;
       margin-top: 148px;
+      height: 100%;
     }
 
     .hero-section--content {
@@ -42,7 +53,6 @@
         text-align: left;
         margin-top: calculate-rem(16px);
         margin-bottom: calculate-rem(24px);
-        
 
         @include deskTopFirst(900) {
           font-size: calculate-rem(28px);
@@ -64,13 +74,13 @@
         max-width: 30%;
 
         @include deskTopFirst(900) {
-            max-width: 50%;
+          max-width: 50%;
         }
         @include deskTopFirst(580) {
-            max-width: 90%;
+          max-width: 90%;
         }
         @include deskTopFirst(360) {
-            max-width: 97%;
+          max-width: 97%;
         }
 
         .to-current-work-link {
