@@ -42,6 +42,14 @@
         text-align: left;
         margin-top: calculate-rem(16px);
         margin-bottom: calculate-rem(24px);
+        
+
+        @include deskTopFirst(900) {
+          font-size: calculate-rem(28px);
+          line-height: 38px;
+          margin-top: calculate-rem(16px);
+          margin-bottom: calculate-rem(16px);
+        }
       }
 
       .hero-sub-text {
@@ -53,6 +61,17 @@
         line-height: 18px;
         letter-spacing: 0.05em;
         text-align: left;
+        max-width: 30%;
+
+        @include deskTopFirst(900) {
+            max-width: 50%;
+        }
+        @include deskTopFirst(580) {
+            max-width: 90%;
+        }
+        @include deskTopFirst(360) {
+            max-width: 97%;
+        }
 
         .to-current-work-link {
           color: $font-color-grey;
@@ -73,7 +92,7 @@
         color: $white;
 
         .resume-icon {
-            margin-left: 8px;
+          margin-left: 8px;
         }
       }
     }

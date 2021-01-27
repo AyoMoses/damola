@@ -429,6 +429,15 @@ a {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 56.25em) {
+  .hero-section__inner .hero-section--content .hero-header {
+    font-size: 1.75rem;
+    line-height: 38px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .hero-section__inner .hero-section--content .hero-sub-text {
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
@@ -438,6 +447,25 @@ a {
   line-height: 18px;
   letter-spacing: 0.05em;
   text-align: left;
+  max-width: 30%;
+}
+
+@media screen and (max-width: 56.25em) {
+  .hero-section__inner .hero-section--content .hero-sub-text {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 36.25em) {
+  .hero-section__inner .hero-section--content .hero-sub-text {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 22.5em) {
+  .hero-section__inner .hero-section--content .hero-sub-text {
+    max-width: 97%;
+  }
 }
 
 .hero-section__inner .hero-section--content .hero-sub-text .to-current-work-link {
