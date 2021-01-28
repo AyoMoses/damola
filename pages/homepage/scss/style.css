@@ -496,11 +496,8 @@ a {
 .hero-section-wrap {
   width: 100%;
   height: auto;
-  background: url(../../../assets/bitmaps/hero-BG-Image.svg);
-  background-repeat: repeat-x;
+  background: url(../../../assets/bitmaps/hero-BG-Image.svg) no-repeat;
   background-position: 0 bottom;
-  animation: 45s slide-bg infinite linear;
-  -webkit-animation: 45s slide-bg infinite linear;
   padding-bottom: 9.25rem;
 }
 
