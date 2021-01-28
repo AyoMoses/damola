@@ -24,11 +24,11 @@
   }
   80% {
     opacity: 0;
-    transform: translate(0, 10px);
-    -webkit-transform: translate(0, 10px);
-    -moz-transform: translate(0, 10px);
-    -ms-transform: translate(0, 10px);
-    -o-transform: translate(0, 10px);
+    transform: translate(0, 15px);
+    -webkit-transform: translate(0, 15px);
+    -moz-transform: translate(0, 15px);
+    -ms-transform: translate(0, 15px);
+    -o-transform: translate(0, 15px);
   }
   100% {
     opacity: 0;
@@ -49,14 +49,58 @@
   }
   80% {
     opacity: 0;
-    transform: translate(0, 10px);
-    -webkit-transform: translate(0, 10px);
-    -moz-transform: translate(0, 10px);
-    -ms-transform: translate(0, 10px);
-    -o-transform: translate(0, 10px);
+    transform: translate(0, 15px);
+    -webkit-transform: translate(0, 15px);
+    -moz-transform: translate(0, 15px);
+    -ms-transform: translate(0, 15px);
+    -o-transform: translate(0, 15px);
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes animate-arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-15px, -15px);
+    -webkit-transform: rotate(45deg) translate(-15px, -15px);
+    -moz-transform: rotate(45deg) translate(-15px, -15px);
+    -ms-transform: rotate(45deg) translate(-15px, -15px);
+    -o-transform: rotate(45deg) translate(-15px, -15px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(15px, 15px);
+    -webkit-transform: rotate(45deg) translate(15px, 15px);
+    -moz-transform: rotate(45deg) translate(15px, 15px);
+    -ms-transform: rotate(45deg) translate(15px, 15px);
+    -o-transform: rotate(45deg) translate(15px, 15px);
+  }
+}
+
+@keyframes animate-arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-15px, -15px);
+    -webkit-transform: rotate(45deg) translate(-15px, -15px);
+    -moz-transform: rotate(45deg) translate(-15px, -15px);
+    -ms-transform: rotate(45deg) translate(-15px, -15px);
+    -o-transform: rotate(45deg) translate(-15px, -15px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(15px, 15px);
+    -webkit-transform: rotate(45deg) translate(15px, 15px);
+    -moz-transform: rotate(45deg) translate(15px, 15px);
+    -ms-transform: rotate(45deg) translate(15px, 15px);
+    -o-transform: rotate(45deg) translate(15px, 15px);
   }
 }
 
@@ -586,6 +630,12 @@ a {
   position: relative;
 }
 
+@media screen and (max-width: 56.25em) {
+  .scroll-down-wrap {
+    display: none;
+  }
+}
+
 .scroll-down-wrap .scroll-down {
   position: absolute;
   left: 0;
@@ -596,34 +646,74 @@ a {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  border: 2px solid #ffffff;
-  height: 35px;
-  width: 25px;
+  border: 2px solid #999999;
+  height: 25px;
+  width: 16px;
   margin: 0 auto;
 }
 
 .scroll-down-wrap .scroll-down::before {
   animation: scrollDownAnimation 2s infinite;
   -webkit-animation: scrollDownAnimation 2s infinite;
-  background-color: #ffffff;
+  background-color: #999999;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
   content: '';
-  height: 6px;
+  height: 5px;
   left: 0;
   margin: 0 auto;
   position: absolute;
   right: 0;
-  top: 10px;
-  width: 6px;
+  top: 1px;
+  width: 5px;
 }
 
 .scroll-down-wrap .scroll-down-text {
-  color: #ffffff;
+  color: #999999;
   text-align: center;
-  margin-top: 0.75rem;
+  margin-top: 2.5rem;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+}
+
+.scroll-down-wrap .scroll-down-text::first-letter {
+  text-transform: capitalize;
+}
+
+.scroll-down-wrap .box {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.scroll-down-wrap .box span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #999999;
+  border-right: 2px solid #999999;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -10px 0;
+  animation: animate-arrow 2s infinite;
+  -webkit-animation: animate-arrow 2s infinite;
+}
+
+.scroll-down-wrap .box span:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.scroll-down-wrap .box span:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
 }
 /*# sourceMappingURL=style.css.map */

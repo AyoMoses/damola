@@ -113,106 +113,76 @@
   flex-direction: column;
   position: relative;
 
+  @include deskTopFirst(900) {
+    display: none;
+  }
+
   .scroll-down {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     @include border-radius(20px);
-    border: 2px solid $white;
-    height: 35px;
-    width: 25px;
+    border: 2px solid $font-color-grey;
+    height: 25px;
+    width: 16px;
     margin: 0 auto;
 
     &::before {
       animation: scrollDownAnimation 2s infinite;
       -webkit-animation: scrollDownAnimation 2s infinite;
-      background-color: $white;
+      background-color: $font-color-grey;
       @include border-radius(100%);
       content: '';
-      height: 6px;
+      height: 5px;
       left: 0;
       margin: 0 auto;
       position: absolute;
       right: 0;
-      top: 10px;
-      width: 6px;
+      top: 1px;
+      width: 5px;
     }
   }
 
   .scroll-down-text {
-    color: $white;
+    color: $font-color-grey;
     text-align: center;
-    margin-top: calculate-rem(12px);
+    margin-top: calculate-rem(40px);
+    font-size: calculate-rem(10px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .box {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .box span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid $font-color-grey;
+    border-right: 2px solid $font-color-grey;
+    transform: rotate(45deg);
+    margin: -10px 0;
+    animation: animate-arrow 2s infinite;
+    -webkit-animation: animate-arrow 2s infinite;
+  }
+
+  .box span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+
+  .box span:nth-child(3) {
+    animation-delay: -0.4s;
   }
 }
-
-// .scroll-down-wrap {
-//   display: flex;
-
-//   .scroll-down__inner {
-//     position: absolute;
-//     width: 20px;
-//     height: 30px;
-//     bottom: 0;
-//     .scroll-down {
-//       border: 2px solid #fff;
-//       @include border-radius(20px);
-//       bottom: 0;
-//       height: 30px;
-//       width: 20px;
-//       left: 50vw;
-//       margin: 0 auto;
-//       position: absolute;
-//       right: 0;
-//     }
-
-//     &::before {
-//       background-color: #fff;
-//       @include border-radius(100%);
-//       content: '';
-//       height: 6px;
-//       left: 50.37vw;
-//       margin: 0 auto;
-//       position: absolute;
-//       right: 0;
-//       top: 2px;
-//       width: 6px;
-//       animation: scrollDownAnimation 2s infinite;
-//       -webkit-animation: scrollDownAnimation 2s infinite;
-//     }
-//   }
-
-//   @keyframes scrollDownAnimation {
-//     0% {
-//       opacity: 0;
-//       transform: translate(0, 0);
-//       -webkit-transform: translate(0, 0);
-//       -moz-transform: translate(0, 0);
-//       -ms-transform: translate(0, 0);
-//       -o-transform: translate(0, 0);
-//     }
-
-//     40% {
-//       opacity: 1;
-//     }
-
-//     80% {
-//       opacity: 0;
-//       transform: translate(0, 20px);
-//       -webkit-transform: translate(0, 20px);
-//       -moz-transform: translate(0, 20px);
-//       -ms-transform: translate(0, 20px);
-//       -o-transform: translate(0, 20px);
-//     }
-//     100% {
-//       opacity: 0;
-//     }
-//   }
-
-//   .scroll-down-text {
-//     color: $white;
-//     display: grid;
-//     place-items: center;
-//   }
-// }
