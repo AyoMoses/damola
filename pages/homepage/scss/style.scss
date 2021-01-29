@@ -319,3 +319,16 @@
     }
   }
 }
+
+.projects-section {
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+  margin-bottom: calculate-rem(148px);
+
+  @include deskTopFirst(900) {
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-bottom: calculate-rem(56px);
+  }
+}
