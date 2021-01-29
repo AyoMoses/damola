@@ -220,6 +220,10 @@ img {
   display: block;
 }
 
+.bold {
+  font-weight: 900;
+}
+
 .section-main-header {
   font-size: 3rem;
   font-style: normal;

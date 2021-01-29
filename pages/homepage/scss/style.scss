@@ -331,4 +331,158 @@
     margin: 0 auto;
     margin-bottom: calculate-rem(56px);
   }
+
+  .project-card-wrap {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 64px 0;
+    width: 100%;
+
+    @include deskTopFirst(900) {
+      gap: 24px 0;
+    }
+
+    .project-card {
+      width: 100%;
+      height: 514px;
+      @include row;
+
+      @include deskTopFirst(900) {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 404px;
+      }
+
+      .project-card-content {
+        height: 100%;
+        width: 40%;
+        padding: 94px 50px 93px 48px;
+
+        @include deskTopFirst(900) {
+          height: 250px;
+          width: 100%;
+          padding: 17px 16px 32.5px 16px;
+          
+        }
+
+        .app-name-wrap {
+          display: flex;
+          flex-direction: row;
+          gap: 0 8px;
+
+          .app-name__bg {
+            color: $white;
+            @include border-radius(5px);
+            padding: 5px;
+            display: grid;
+            place-items: center;
+            .app-name {
+              font-size: calculate-rem(14px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 18px;
+              letter-spacing: 0em;
+
+              @include deskTopFirst(900) {
+                font-size: calculate-rem(10px);
+                line-height: 13px;
+                letter-spacing: 0em;
+              }
+            }
+          }
+          .proj-one {
+            background: #d96490;
+          }
+          .proj-two {
+            background: #5ebfd7;
+          }
+          .proj-three {
+            background: #c46fe3;
+          }
+        }
+
+        .project-name {
+          font-size: calculate-rem(32px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 40px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $white;
+          margin-top: 24px;
+          
+          @include deskTopFirst(900) {
+            font-size: calculate-rem(24px);
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-top: 16px;
+          }
+        }
+
+        .project-summary {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 23px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $white;
+          margin-top: 16px;
+          margin-bottom: 32px;
+          
+          @include deskTopFirst(900) {
+            font-size: calculate-rem(12px);
+            line-height: 15px;
+            margin-bottom: 16.5px;
+          }
+        }
+
+        .case-study-link {
+          font-size: calculate-rem(18px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 23px;
+          letter-spacing: 0.05em;
+          text-align: left;
+          text-transform: capitalize;
+          display: flex;
+          align-items: center;
+          color: $white;
+
+          @include deskTopFirst(900) {
+            font-size: calculate-rem(12px);
+            line-height: 15px;
+          }
+
+          .resume-icon {
+            margin-left: 8px;
+          }
+        }
+      }
+      .project-card-image {
+        height: 100%;
+        width: 60%;
+        max-width: 100%;
+        background: $white;
+        object-fit: cover;
+        object-position: center;
+
+        @include deskTopFirst(900) {
+          height: 154px;
+          width: 100%;
+        }
+      }
+    }
+
+    .projcard-one {
+      background: linear-gradient(90deg, #c84e89 0%, #f15f79 100%);
+    }
+    .projcard-two {
+      background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+    }
+    .projcard-three {
+      background: linear-gradient(90deg, #bf5ae0 0%, #a811da 100%);
+    }
+  }
 }
