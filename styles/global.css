@@ -104,6 +104,40 @@
   }
 }
 
+@-webkit-keyframes scale-bg {
+  0% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes scale-bg {
+  0% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -126,7 +160,7 @@ html:focus-within {
 }
 
 :root ::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
+  background-color: #0d0d0f;
 }
 
 *,
@@ -452,7 +486,7 @@ a {
 .header .menu-btn:checked ~ .menu {
   height: 100vh;
   max-height: 100vh;
-  width: 100vh;
+  width: 100%;
   background: #0d0d0f;
   position: fixed;
   top: 0;

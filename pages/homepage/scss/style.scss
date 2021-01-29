@@ -188,23 +188,81 @@
 }
 
 .process-section-wrap {
-  height: 500px;
-  background: red;
+  height: 600px;
+  // background: url(../../../assets/icons/stack-circle.svg) no-repeat;
+  // background-position: center;
+  // background-size: contain;
   width: 100%;
   max-width: calc(100% - 160px);
   margin: 0 auto;
-  margin-top: 148px;
+  margin-top: calculate-rem(148px);
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url('../../../assets/icons/stack-circle.svg') no-repeat;
+    background-position: center;
+    animation: 4s scale-bg 2 linear;
+    -webkit-animation: 4s scale-bg 2 linear;
+}
 
   @include deskTopFirst(900) {
     width: 100%;
-    max-width: calc(100% - 48px); 
+    max-width: calc(100% - 48px);
     margin: 0 auto;
+    margin-top: calculate-rem(56px);
   }
   .process-header {
+    display: none;
+    @include deskTopFirst(900) {
+      display: block;
+      font-size: calculate-rem(18px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: $font-color-grey;
+      text-transform: capitalize;
+    }
   }
 
   .process-section__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 24px;
     .process-card {
+      width: 100%;
+      height: auto;
+      background: #242429;
+      color: $white;
+      padding: 2.0625rem 2.3125rem 2.3125rem 3.25rem;
+
+      .process-card__header {
+        font-size: calculate-rem(18px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        margin-bottom: calculate-rem(22px);
+      }
+      .process-card-content {
+        font-size: calculate-rem(14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        text-align: left;
+      }
     }
   }
 }
