@@ -186,3 +186,25 @@
     animation-delay: -0.4s;
   }
 }
+
+.process-section-wrap {
+  height: 500px;
+  background: red;
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+  margin-top: 148px;
+
+  @include deskTopFirst(900) {
+    width: 100%;
+    max-width: calc(100% - 48px); 
+    margin: 0 auto;
+  }
+  .process-header {
+  }
+
+  .process-section__inner {
+    .process-card {
+    }
+  }
+}
