@@ -189,16 +189,19 @@
 
 .process-section-wrap {
   height: 600px;
-  // background: url(../../../assets/icons/stack-circle.svg) no-repeat;
-  // background-position: center;
-  // background-size: contain;
   width: 100%;
   max-width: calc(100% - 160px);
   margin: 0 auto;
   margin-top: calculate-rem(148px);
+  margin-bottom: calculate-rem(148px);
   display: grid;
   place-items: center;
   position: relative;
+
+  @include deskTopFirst(900) {
+    display: block;
+    height: auto;
+  }
 
   &::before {
     content: '';
@@ -212,13 +215,17 @@
     background-position: center;
     animation: 4s scale-bg 2 linear;
     -webkit-animation: 4s scale-bg 2 linear;
-}
+    @include deskTopFirst(900) {
+      display: none;
+    }
+  }
 
   @include deskTopFirst(900) {
     width: 100%;
     max-width: calc(100% - 48px);
     margin: 0 auto;
     margin-top: calculate-rem(56px);
+    margin-bottom: calculate-rem(56px);
   }
   .process-header {
     display: none;
@@ -232,6 +239,7 @@
       text-align: left;
       color: $font-color-grey;
       text-transform: capitalize;
+      margin-bottom: 1rem;
     }
   }
 
@@ -239,12 +247,46 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 24px;
+
+    @include deskTopFirst(900) {
+      grid-template-columns: 1fr;
+      gap: 24px 0;
+    }
     .process-card {
       width: 100%;
       height: auto;
-      background: #242429;
       color: $white;
-      padding: 2.0625rem 2.3125rem 2.3125rem 3.25rem;
+      padding: 2.0625rem 1rem 2.3125rem 5.25rem;
+
+      @include deskTopFirst(900) {
+        padding: 1rem 1.3125rem 1rem 2rem;
+        height: 130px;
+        @include column;
+        justify-content: center;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        background: #18181b;
+        background-repeat: no-repeat;
+        background-position: 0 bottom;
+
+        @include deskTopFirst(900) {
+          background-position: left 45px;
+        }
+      }
+
+      &:nth-child(1) {
+        background-image: url('../../../assets/icons/1.svg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('../../../assets/icons/2.svg');
+      }
+      &:nth-child(3) {
+        background-image: url('../../../assets/icons/3.svg');
+      }
 
       .process-card__header {
         font-size: calculate-rem(18px);
@@ -254,6 +296,12 @@
         letter-spacing: 0.02em;
         text-align: left;
         margin-bottom: calculate-rem(22px);
+        color: $white;
+
+        @include deskTopFirst(900) {
+          font-size: calculate-rem(14px);
+          margin-bottom: calculate-rem(8px);
+        }
       }
       .process-card-content {
         font-size: calculate-rem(14px);
@@ -262,6 +310,11 @@
         line-height: 18px;
         letter-spacing: 0.02em;
         text-align: left;
+        color: $font-color-grey;
+
+        @include deskTopFirst(900) {
+          font-size: calculate-rem(11px);
+        }
       }
     }
   }
