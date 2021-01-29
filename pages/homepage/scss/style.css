@@ -235,7 +235,7 @@ img {
 .section-main-header::before {
   content: url("../../../assets/icons/header-decor.svg");
   position: absolute;
-  bottom: -10px;
+  bottom: -12px;
   left: 32px;
   background-repeat: no-repeat;
   z-index: -1;
