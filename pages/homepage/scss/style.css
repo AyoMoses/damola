@@ -1182,86 +1182,43 @@ a {
   background: linear-gradient(90deg, #bf5ae0 0%, #a811da 100%);
 }
 
-/* Steps timeline*/
-.steps-timeline {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.step-title,
-.step-description {
-  margin: 0;
-  display: block;
+.work-exp-section li {
+  width: 2em;
+  height: 2em;
   text-align: center;
-  color: #ffffff;
+  line-height: 2em;
+  border-radius: 1em;
+  background: dodgerblue;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
 }
 
-.step-title {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.work-exp-section li::before {
+  content: '';
+  position: absolute;
+  top: .9em;
+  left: -4em;
+  width: 4em;
+  height: .2em;
+  background: dodgerblue;
+  z-index: -1;
 }
 
-.ste-description {
-  overflow: hidden;
-  line-height: 20px;
+.work-exp-section li:first-child::before {
+  display: none;
 }
 
-.steps-timeline .step {
-  outline: 1px dashed rgba(0, 128, 0, 0);
-  margin-bottom: 20px;
+.work-exp-section .active {
+  background: dodgerblue;
 }
 
-.step-milestone {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border: 8px solid red;
-  border-radius: 50%;
-  margin: 15px auto;
+.work-exp-section .active ~ li {
+  background: lightblue;
 }
 
-@media screen and (max-width: 56.25em) {
-  .steps-timeline {
-    border-left: 2px solid #3498db;
-    margin-left: 25px;
-  }
-  .steps-timeline .step {
-    margin-left: -25px;
-    display: block;
-    overflow: auto;
-  }
-  .step-milestone {
-    float: left;
-    margin-left: 10px;
-  }
-  .step-title,
-  .step-description {
-    text-align: left;
-    margin-left: 60px;
-  }
-}
-
-@media screen and (min-width: 56.3125em) {
-  .steps-timeline {
-    border-top: 2px solid #3498db;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .steps-timeline .step {
-    margin-top: -30px;
-    /* Safari 6.1+ */
-    -ms-flex: 1;
-    /* IE 10 */
-    -webkit-box-flex: 1;
-            flex: 1;
-  }
+.work-exp-section .active ~ li::before {
+  background: lightblue;
 }
 /*# sourceMappingURL=style.css.map */
