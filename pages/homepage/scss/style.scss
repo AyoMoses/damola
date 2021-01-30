@@ -362,7 +362,6 @@
           height: 250px;
           width: 100%;
           padding: 17px 16px 32.5px 16px;
-          
         }
 
         .app-name-wrap {
@@ -410,7 +409,7 @@
           text-align: left;
           color: $white;
           margin-top: 24px;
-          
+
           @include deskTopFirst(900) {
             font-size: calculate-rem(24px);
             line-height: 30px;
@@ -430,7 +429,7 @@
           color: $white;
           margin-top: 16px;
           margin-bottom: 32px;
-          
+
           @include deskTopFirst(900) {
             font-size: calculate-rem(12px);
             line-height: 15px;
@@ -484,5 +483,93 @@
     .projcard-three {
       background: linear-gradient(90deg, #bf5ae0 0%, #a811da 100%);
     }
+  }
+}
+
+// WORK EXPERIENCE
+/* Steps timeline*/
+.steps-timeline {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.step-title,
+.step-description {
+  margin: 0;
+  display: block;
+  text-align: center;
+  color: $white;
+}
+
+.step-title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ste-description {
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.steps-timeline .step {
+  outline: 1px dashed rgba(0, 128, 0, 0);
+  margin-bottom: 20px;
+}
+
+.step-milestone {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 8px solid red;
+  border-radius: 50%;
+  margin: 15px auto;
+  // box-sizing: border-box;
+}
+
+@include deskTopFirst(900) {
+  .steps-timeline {
+    border-left: 2px solid #3498db;
+    margin-left: 25px;
+  }
+
+  .steps-timeline .step {
+    margin-left: -25px;
+    display: block;
+    overflow: auto;
+  }
+
+  .step-milestone {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .step-title,
+  .step-description {
+    text-align: left;
+    margin-left: 60px;
+  }
+}
+@include mobileFirst(901) {
+  .steps-timeline {
+    border-top: 2px solid #3498db;
+    // margin-top: 50px;
+    // margin-left: 10%;
+    // margin-right: 10%;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .steps-timeline .step {
+    margin-top: -30px;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
   }
 }
