@@ -202,6 +202,11 @@
   grid-template-columns: repeat($repeat, 1fr);
 }
 
+@mixin center-items {
+  display: grid;
+  place-items: center;
+}
+
 @mixin scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -211,7 +216,14 @@
   }
 }
 
-@mixin scrollbar-show($barWidth, $borderWidth, $bar-color, $radius, $track-bg, $thumb-bg) {
+@mixin scrollbar-show(
+  $barWidth,
+  $borderWidth,
+  $bar-color,
+  $radius,
+  $track-bg,
+  $thumb-bg
+) {
   -ms-overflow-style: block;
 
   &::-webkit-scrollbar {
@@ -253,7 +265,6 @@
 }
 
 @mixin placeholder($color) {
-
   /* WebKit, Edge */
   &::-webkit-input-placeholder {
     color: $color;
@@ -280,6 +291,18 @@
   }
 
   /* MODERN BROWSER */
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
   &::placeholder {
     color: $color;
   }
@@ -308,7 +331,6 @@
   margin: 0 auto;
 
   @include mobileFirst(900) {
-
     width: 100%;
     max-width: calc(100% - 160px); //244px
     margin: 0 auto;
@@ -323,12 +345,10 @@
   -o-transform: rotate($value);
 }
 
-
 // ANIMATION KEYFRAME
 
 @mixin translate-x($start, $middle) {
   @keyframes translate-x {
-
     0% {
       transform: translateX($start);
       -webkit-transform: translateX($start);
@@ -346,77 +366,15 @@
     }
 
     100% {
-
-      transform: translateX($start);
-      -webkit-transform: translateX($start);
-      -moz-transform: translateX($start);
-      -ms-transform: translateX($start);
-      -o-transform: translateX($start);
-
-    }
-  }
-
-  @-o-keyframes translate-x {
-
-    0% {
       transform: translateX($start);
       -webkit-transform: translateX($start);
       -moz-transform: translateX($start);
       -ms-transform: translateX($start);
       -o-transform: translateX($start);
     }
-
-    50% {
-      transform: translateX($middle);
-      -webkit-transform: translateX($middle);
-      -moz-transform: translateX($middle);
-      -ms-transform: translateX($middle);
-      -o-transform: translateX($middle);
-    }
-
-    100% {
-
-      transform: translateX($start);
-      -webkit-transform: translateX($start);
-      -moz-transform: translateX($start);
-      -ms-transform: translateX($start);
-      -o-transform: translateX($start);
-
-    }
-  }
-
-  @-moz-keyframes translate-x {
-
-    0% {
-      transform: translateX($start);
-      -webkit-transform: translateX($start);
-      -moz-transform: translateX($start);
-      -ms-transform: translateX($start);
-      -o-transform: translateX($start);
-    }
-
-    50% {
-      transform: translateX($middle);
-      -webkit-transform: translateX($middle);
-      -moz-transform: translateX($middle);
-      -ms-transform: translateX($middle);
-      -o-transform: translateX($middle);
-    }
-
-    100% {
-
-      transform: translateX($start);
-      -webkit-transform: translateX($start);
-      -moz-transform: translateX($start);
-      -ms-transform: translateX($start);
-      -o-transform: translateX($start);
-
-    }
-
   }
 
   @-webkit-keyframes translate-x {
-
     0% {
       transform: translateX($start);
       -webkit-transform: translateX($start);
@@ -434,76 +392,17 @@
     }
 
     100% {
-
       transform: translateX($start);
       -webkit-transform: translateX($start);
       -moz-transform: translateX($start);
       -ms-transform: translateX($start);
       -o-transform: translateX($start);
-
     }
-
   }
 }
 
 @mixin scale-animation($start, $middle) {
-
   @keyframes scale-animation {
-
-    0% {
-      transform: scale($start);
-      -webkit-transform: scale($start);
-      -moz-transform: scale($start);
-      -ms-transform: scale($start);
-      -o-transform: scale($start);
-    }
-
-    50% {
-      transform: scale($middle);
-      -webkit-transform: scale($middle);
-      -moz-transform: scale($middle);
-      -ms-transform: scale($middle);
-      -o-transform: scale($middle);
-    }
-
-    100% {
-      transform: scale($start);
-      -webkit-transform: scale($start);
-      -moz-transform: scale($start);
-      -ms-transform: scale($start);
-      -o-transform: scale($start);
-    }
-  }
-
-  @-o-keyframes scale-animation {
-
-    0% {
-      transform: scale($start);
-      -webkit-transform: scale($start);
-      -moz-transform: scale($start);
-      -ms-transform: scale($start);
-      -o-transform: scale($start);
-    }
-
-    50% {
-      transform: scale($middle);
-      -webkit-transform: scale($middle);
-      -moz-transform: scale($middle);
-      -ms-transform: scale($middle);
-      -o-transform: scale($middle);
-    }
-
-    100% {
-      transform: scale($start);
-      -webkit-transform: scale($start);
-      -moz-transform: scale($start);
-      -ms-transform: scale($start);
-      -o-transform: scale($start);
-    }
-  }
-
-  @-moz-keyframes scale-animation {
-
     0% {
       transform: scale($start);
       -webkit-transform: scale($start);
@@ -530,7 +429,6 @@
   }
 
   @-webkit-keyframes scale-animation {
-
     0% {
       transform: scale($start);
       -webkit-transform: scale($start);
