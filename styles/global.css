@@ -391,7 +391,7 @@ img {
   z-index: -1;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .section-main-header::before {
     content: url("../../../assets/icons/header-decor-small.svg");
     position: absolute;
@@ -402,7 +402,7 @@ img {
   }
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .section-main-header {
     font-size: 1.125rem;
     line-height: 25px;
@@ -474,7 +474,7 @@ a {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .header-wrap {
     max-width: 100%;
   }
@@ -498,7 +498,7 @@ a {
   margin-top: 64px;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .header {
     display: inline-block;
     max-width: calc(100% - 24px);
@@ -521,7 +521,7 @@ a {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .header li a {
     padding: 2em 0.5em;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -533,7 +533,7 @@ a {
   padding-right: 48px;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .menu li:not(:last-child) {
     padding-right: 0;
   }
@@ -555,7 +555,7 @@ a {
   font-weight: 800;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .menu .link-one,
   .menu .link-two,
   .menu .link-three {
@@ -595,7 +595,7 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .header .logo {
     margin-left: 24px;
   }
@@ -607,7 +607,7 @@ a {
   max-height: 0;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 63.875em) {
   .header .menu {
     display: -ms-grid;
     display: grid;
@@ -703,7 +703,7 @@ a {
 }
 
 /* 48em = 768px */
-@media (min-width: 56.25em) {
+@media (min-width: 63.9375em) {
   .header li {
     float: left;
   }
