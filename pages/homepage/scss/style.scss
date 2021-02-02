@@ -674,22 +674,26 @@ $inactive-circle-diam: 20px;
 
     .arrows-wrap {
       position: absolute;
-      right: 52%;
+      right: 50.7%;
       bottom: 0;
       display: flex;
       flex-direction: row;
       z-index: 999999;
 
       @include deskTopFirst(1500) {
-        left: 45%;
+        left: 46%;
+      }
+
+      @include deskTopFirst(1335) {
+        left: 47%;
       }
 
       @include deskTopFirst(1230) {
-        left: 45.7%;
+        left: 47.6%;
       }
 
       @include deskTopFirst(1095) {
-        left: 45.7%;
+        left: 48.7%;
       }
 
       @include deskTopFirst(1022) {
@@ -702,12 +706,6 @@ $inactive-circle-diam: 20px;
         background: transparent;
         border: none;
         cursor: pointer;
-
-        // .slide-arrow-icon {
-        //   &:hover {
-
-        //   }
-        // }
       }
       .left {
         margin-right: 1rem;
@@ -719,7 +717,7 @@ $inactive-circle-diam: 20px;
 .testim-content-wrap {
   display: flex;
   flex-direction: row;
-  gap: 0 64px;
+  gap: 0 84px;
 
   @include deskTopFirst(1022) {
     flex-direction: column;
@@ -731,6 +729,7 @@ $inactive-circle-diam: 20px;
     width: 100%;
     height: 546px;
     width: 40%;
+    position: relative;
 
     @include deskTopFirst(1022) {
       height: 327px;
@@ -745,9 +744,25 @@ $inactive-circle-diam: 20px;
       object-fit: cover;
       object-position: center;
     }
+    .img-design {
+      content: '';
+      position: absolute;
+      top: 46px;
+      left: 40px;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+
+      @include deskTopFirst(1022) {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
   .test-slide-content {
-    width: 40%;
+    width: 46%;
     align-self: center;
 
     @include deskTopFirst(1095) {
@@ -814,15 +829,13 @@ $inactive-circle-diam: 20px;
 
 .testim .cont {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .testim .cont > div {
-  // text-align: center;
   position: absolute;
   top: 0;
   left: 0;
-  // padding: 0 0 70px 0;
   opacity: 0;
   width: 100%;
 }
@@ -837,6 +850,14 @@ $inactive-circle-diam: 20px;
 }
 
 .testim .cont div.active .img img {
+  -webkit-animation: testim-show 0.5s ease-in-out forwards;
+  -moz-animation: testim-show 0.5s ease-in-out forwards;
+  -ms-animation: testim-show 0.5s ease-in-out forwards;
+  -o-animation: testim-show 0.5s ease-in-out forwards;
+  animation: testim-show 0.5s ease-in-out forwards;
+}
+
+.testim .cont div.active .img .img-design {
   -webkit-animation: testim-show 0.5s ease-in-out forwards;
   -moz-animation: testim-show 0.5s ease-in-out forwards;
   -ms-animation: testim-show 0.5s ease-in-out forwards;
@@ -866,6 +887,13 @@ $inactive-circle-diam: 20px;
   -ms-animation: testim-hide 0.5s ease-in-out forwards;
   -o-animation: testim-hide 0.5s ease-in-out forwards;
   animation: testim-hide 0.5s ease-in-out forwards;
+}
+.testim .cont div.inactive .img .img-design {
+  -webkit-animation: testim-show 0.5s ease-in-out forwards;
+  -moz-animation: testim-show 0.5s ease-in-out forwards;
+  -ms-animation: testim-show 0.5s ease-in-out forwards;
+  -o-animation: testim-show 0.5s ease-in-out forwards;
+  animation: testim-show 0.5s ease-in-out forwards;
 }
 
 .testim .cont div.inactive h2 {

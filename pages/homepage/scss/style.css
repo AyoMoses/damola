@@ -482,7 +482,7 @@ a {
 
 .header {
   position: fixed;
-  z-index: 3;
+  z-index: 999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1569,7 +1569,7 @@ a {
 
 .testimonial-section .wrap .arrows-wrap {
   position: absolute;
-  right: 52%;
+  right: 50.7%;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1583,19 +1583,25 @@ a {
 
 @media screen and (max-width: 93.75em) {
   .testimonial-section .wrap .arrows-wrap {
-    left: 45%;
+    left: 46%;
+  }
+}
+
+@media screen and (max-width: 83.4375em) {
+  .testimonial-section .wrap .arrows-wrap {
+    left: 47%;
   }
 }
 
 @media screen and (max-width: 76.875em) {
   .testimonial-section .wrap .arrows-wrap {
-    left: 45.7%;
+    left: 47.6%;
   }
 }
 
 @media screen and (max-width: 68.4375em) {
   .testimonial-section .wrap .arrows-wrap {
-    left: 45.7%;
+    left: 48.7%;
   }
 }
 
@@ -1625,7 +1631,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 0 64px;
+  gap: 0 84px;
 }
 
 @media screen and (max-width: 63.875em) {
@@ -1642,6 +1648,7 @@ a {
   width: 100%;
   height: 546px;
   width: 40%;
+  position: relative;
 }
 
 @media screen and (max-width: 63.875em) {
@@ -1662,8 +1669,27 @@ a {
      object-position: center;
 }
 
+.testim-content-wrap .img .img-design {
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: 40px;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 63.875em) {
+  .testim-content-wrap .img .img-design {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .testim-content-wrap .test-slide-content {
-  width: 40%;
+  width: 46%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1745,7 +1771,6 @@ a {
 
 .testim .cont {
   position: relative;
-  overflow: hidden;
 }
 
 .testim .cont > div {
@@ -1770,6 +1795,11 @@ a {
   animation: testim-show 0.5s ease-in-out forwards;
 }
 
+.testim .cont div.active .img .img-design {
+  -webkit-animation: testim-show 0.5s ease-in-out forwards;
+  animation: testim-show 0.5s ease-in-out forwards;
+}
+
 .testim .cont div.active h2 {
   -webkit-animation: testim-content-in 0.4s ease-in-out forwards;
   animation: testim-content-in 0.4s ease-in-out forwards;
@@ -1783,6 +1813,11 @@ a {
 .testim .cont div.inactive .img img {
   -webkit-animation: testim-hide 0.5s ease-in-out forwards;
   animation: testim-hide 0.5s ease-in-out forwards;
+}
+
+.testim .cont div.inactive .img .img-design {
+  -webkit-animation: testim-show 0.5s ease-in-out forwards;
+  animation: testim-show 0.5s ease-in-out forwards;
 }
 
 .testim .cont div.inactive h2 {
