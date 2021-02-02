@@ -4,6 +4,9 @@
 .bold {
   font-weight: 900;
 }
+.italic {
+  font-style: italic;
+}
 
 .section-main-header {
   font-size: calculate-rem(48px);
@@ -24,7 +27,7 @@
     background-repeat: no-repeat;
     z-index: -1;
 
-    @include deskTopFirst(900) {
+    @include deskTopFirst(1022) {
       content: url('../../../assets/icons/header-decor-small.svg');
       position: absolute;
       bottom: -4.5px;
@@ -34,7 +37,7 @@
     }
   }
 
-  @include deskTopFirst(900) {
+  @include deskTopFirst(1022) {
     font-size: calculate-rem(18px);
     line-height: 25px;
     margin-bottom: calculate-rem(21px);

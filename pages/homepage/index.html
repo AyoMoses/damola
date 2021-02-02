@@ -323,8 +323,31 @@
         <div class="wrap">
 
             <div class="arrows-wrap">
-                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
-                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <!-- <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span> -->
+                <button id="left-arrow" class="arrow-btn left">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="slide-arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.708 22.7082C11.6151 22.8013 11.5048 22.8752 11.3833 22.9256C11.2618 22.976 11.1315 23.002 11 23.002C10.8685 23.002 10.7382 22.976 10.6167 22.9256C10.4952 22.8752 10.3849 22.8013 10.292 22.7082L4.292 16.7082C4.19887 16.6153 4.12499 16.5049 4.07457 16.3834C4.02416 16.2619 3.99821 16.1317 3.99821 16.0002C3.99821 15.8686 4.02416 15.7384 4.07457 15.6169C4.12499 15.4954 4.19887 15.3851 4.292 15.2922L10.292 9.29217C10.4798 9.10439 10.7344 8.9989 11 8.9989C11.2655 8.9989 11.5202 9.10439 11.708 9.29217C11.8958 9.47994 12.0013 9.73462 12.0013 10.0002C12.0013 10.2657 11.8958 10.5204 11.708 10.7082L6.414 16.0002L11.708 21.2922C11.8011 21.3851 11.875 21.4954 11.9254 21.6169C11.9758 21.7384 12.0018 21.8686 12.0018 22.0002C12.0018 22.1317 11.9758 22.2619 11.9254 22.3834C11.875 22.5049 11.8011 22.6153 11.708 22.7082Z"
+                            fill="#808080" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17L6 17C5.73478 17 5.48043 16.8946 5.29289 16.7071C5.10536 16.5196 5 16.2652 5 16C5 15.7348 5.10536 15.4804 5.29289 15.2929C5.48043 15.1054 5.73478 15 6 15L27 15C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z"
+                            fill="#808080" />
+                    </svg>
+
+                </button>
+                <button id="right-arrow" class="arrow-btn">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.292 9.29183C20.3849 9.19871 20.4952 9.12482 20.6167 9.07441C20.7382 9.024 20.8685 8.99805 21 8.99805C21.1315 8.99805 21.2618 9.024 21.3833 9.07441C21.5048 9.12482 21.6151 9.19871 21.708 9.29183L27.708 15.2918C27.8011 15.3847 27.875 15.4951 27.9254 15.6166C27.9758 15.7381 28.0018 15.8683 28.0018 15.9998C28.0018 16.1314 27.9758 16.2616 27.9254 16.3831C27.875 16.5046 27.8011 16.6149 27.708 16.7078L21.708 22.7078C21.5202 22.8956 21.2656 23.0011 21 23.0011C20.7345 23.0011 20.4798 22.8956 20.292 22.7078C20.1042 22.5201 19.9987 22.2654 19.9987 21.9998C19.9987 21.7343 20.1042 21.4796 20.292 21.2918L25.586 15.9998L20.292 10.7078C20.1989 10.6149 20.125 10.5046 20.0746 10.3831C20.0242 10.2616 19.9982 10.1314 19.9982 9.99983C19.9982 9.8683 20.0242 9.73806 20.0746 9.61657C20.125 9.49508 20.1989 9.38473 20.292 9.29183Z"
+                            fill="#808080" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H26C26.2652 15 26.5196 15.1054 26.7071 15.2929C26.8946 15.4804 27 15.7348 27 16C27 16.2652 26.8946 16.5196 26.7071 16.7071C26.5196 16.8946 26.2652 17 26 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16Z"
+                            fill="#808080" />
+                    </svg>
+
+                </button>
             </div>
             <ul id="testim-dots" class="dots">
                 <li class="dot active"></li>
@@ -340,92 +363,82 @@
             <div id="testim-content" class="cont">
 
                 <div class="active testim-content-wrap">
-                    <div class="img"><img src="https://image.ibb.co/hgy1M7/5a6f718346a28820008b4611_750_562.jpg"
+                    <div class="img"><img src="../../assets/bitmaps/slide-1.jpg"
                             class="slide-img" alt="">
                     </div>
                     <div class="test-slide-content">
-                        <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <h2>“John has helped our business deliver incredible results, leading success for our UI & UX”
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet
+                            scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam
+                            dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut
+                            tempus id, aliquam a orci.
                         </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <p>Tunji Ogunoye | <span class="italic">Founding Partner, ForthCanvas</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="testim-content-wrap">
-                    <div class="img"><img src="https://image.ibb.co/cNP817/pexels_photo_220453.jpg" class="slide-img"
+                    <div class="img"><img src="../../assets/bitmaps/slide-2.jpg" class="slide-img"
                             alt=""></div>
                     <div class="test-slide-content">
-                        <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <h2>“John has helped our business deliver incredible results, leading success for our UI & UX”
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet
+                            scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam
+                            dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut
+                            tempus id, aliquam a orci.
                         </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <p>Tunji Ogunoye | <span class="italic">Founding Partner, ForthCanvas</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="testim-content-wrap">
-                    <div class="img"><img src="https://image.ibb.co/iN3qES/pexels_photo_324658.jpg" class="slide-img"
+                    <div class="img"><img src="../../assets/bitmaps/slide-3.jpg" class="slide-img"
                             alt=""></div>
                     <div class="test-slide-content">
-                        <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <h2>“John has helped our business deliver incredible results, leading success for our UI & UX”
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet
+                            scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam
+                            dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut
+                            tempus id, aliquam a orci.
                         </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <p>Tunji Ogunoye | <span class="italic">Founding Partner, ForthCanvas</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="testim-content-wrap">
-                    <div class="img"><img src="https://image.ibb.co/kL6AES/Top_SA_Nicky_Oppenheimer.jpg"
+                    <div class="img"><img src="../../assets/bitmaps/slide-4.jpg"
                             class="slide-img" alt="">
                     </div>
                     <div class="test-slide-content">
-                        <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <h2>“John has helped our business deliver incredible results, leading success for our UI & UX”
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet
+                            scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam
+                            dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut
+                            tempus id, aliquam a orci.
                         </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <p>Tunji Ogunoye | <span class="italic">Founding Partner, ForthCanvas</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="testim-content-wrap">
-                    <div class="img"><img src="https://image.ibb.co/gUPag7/image.jpg" class="slide-img" alt=""></div>
+                    <div class="img"><img src="../../assets/bitmaps/slide-2.jpg" class="slide-img" alt=""></div>
                     <div class="test-slide-content">
-                        <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <h2>“John has helped our business deliver incredible results, leading success for our UI & UX”
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, sapien sit amet
+                            scelerisque laoreet, eros justo congue neque, in maximus tellus velit vitae lacus. Nam
+                            dapibus augue ante, molestie malesuada est ullamcorper vel. Fusce purus ipsum, gravida ut
+                            tempus id, aliquam a orci.
                         </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco.
+                        <p>Tunji Ogunoye | <span class="italic">Founding Partner, ForthCanvas</span>
                         </p>
                     </div>
                 </div>
@@ -435,6 +448,8 @@
         </div>
 
     </section>
+
+    <section class="collabo-section-wrap"></section>
 
 
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>

@@ -366,6 +366,10 @@ img {
   font-weight: 900;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .section-main-header {
   font-size: 3rem;
   font-style: normal;
