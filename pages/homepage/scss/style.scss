@@ -1035,6 +1035,23 @@ $inactive-circle-diam: 20px;
             height: 16px;
           }
         }
+        &:hover .social-icon {
+          fill: $card-bg;
+        } 
+        &:focus .social-icon {
+          stroke: $card-bg-2;
+        }
+
+        &:hover .drib-icon {
+          stroke: $card-bg;
+        }
+        &:focus .drib-icon {
+          stroke: $card-bg-2;
+        }
+        .drib-icon,
+        .social-icon {
+          @include transition;
+        }
       }
     }
     .footer-copyright-wrap {

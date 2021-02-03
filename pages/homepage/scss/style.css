@@ -2018,6 +2018,31 @@ a {
   }
 }
 
+.footer-section-wrapper .footer-section__inner .footer-socials-wrap .social-link:hover .social-icon {
+  fill: #C84E89;
+}
+
+.footer-section-wrapper .footer-section__inner .footer-socials-wrap .social-link:focus .social-icon {
+  stroke: #2193B0;
+}
+
+.footer-section-wrapper .footer-section__inner .footer-socials-wrap .social-link:hover .drib-icon {
+  stroke: #C84E89;
+}
+
+.footer-section-wrapper .footer-section__inner .footer-socials-wrap .social-link:focus .drib-icon {
+  stroke: #2193B0;
+}
+
+.footer-section-wrapper .footer-section__inner .footer-socials-wrap .social-link .drib-icon,
+.footer-section-wrapper .footer-section__inner .footer-socials-wrap .social-link .social-icon {
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
 .footer-section-wrapper .footer-section__inner .footer-copyright-wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1;
