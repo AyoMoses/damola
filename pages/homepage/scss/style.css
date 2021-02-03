@@ -1639,6 +1639,10 @@ a {
   cursor: pointer;
 }
 
+.testimonial-section .wrap .arrows-wrap .arrow-btn:hover .slider-arrow {
+  fill: #ffffff;
+}
+
 .testimonial-section .wrap .arrows-wrap .left {
   margin-right: 1rem;
 }

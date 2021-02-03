@@ -713,6 +713,10 @@ $inactive-circle-diam: 20px;
         background: transparent;
         border: none;
         cursor: pointer;
+
+        &:hover .slider-arrow {
+          fill: $white;
+        }
       }
       .left {
         margin-right: 1rem;
@@ -1044,7 +1048,7 @@ $inactive-circle-diam: 20px;
         }
         &:hover .social-icon {
           fill: $card-bg;
-        } 
+        }
         &:focus .social-icon {
           stroke: $card-bg-2;
         }
