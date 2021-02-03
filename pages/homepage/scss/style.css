@@ -1145,6 +1145,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 @media screen and (max-width: 63.875em) {
@@ -1226,6 +1231,16 @@ a {
   background: #c46fe3;
 }
 
+.projects-section .project-card-wrap .project-card .project-card-content .app-name-wrap .proj-one,
+.projects-section .project-card-wrap .project-card .project-card-content .app-name-wrap .proj-two,
+.projects-section .project-card-wrap .project-card .project-card-content .app-name-wrap .proj-three {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
 .projects-section .project-card-wrap .project-card .project-card-content .project-name {
   font-size: 2rem;
   font-style: normal;
@@ -1296,6 +1311,11 @@ a {
 }
 
 .projects-section .project-card-wrap .project-card .project-card-image {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   height: 100%;
   width: 60%;
   max-width: 100%;
