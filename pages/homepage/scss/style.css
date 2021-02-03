@@ -1667,6 +1667,11 @@ a {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .testim-content-wrap .img .img-design {
@@ -1831,12 +1836,12 @@ a {
 }
 
 .collabo-section-wrap {
+  height: auto;
   width: 100%;
   max-width: calc(100% - 160px);
   margin: 0 auto;
   margin-top: 188px;
-  background: chartreuse;
-  height: 500px;
+  margin-bottom: 178px;
 }
 
 @media screen and (max-width: 63.875em) {
@@ -1845,6 +1850,88 @@ a {
     max-width: calc(100% - 48px);
     margin: 0 auto;
     margin-top: 100px;
+    margin-bottom: 56px;
   }
+}
+
+.collabo-section-wrap .work-together-header {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 63.875em) {
+  .collabo-section-wrap .work-together-header {
+    font-size: 1.5rem;
+    line-height: 33px;
+  }
+}
+
+.collabo-section-wrap .work-email-label,
+.collabo-section-wrap .work-email {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.collabo-section-wrap .work-email-label {
+  color: #ffffff;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 63.875em) {
+  .collabo-section-wrap .work-email-label {
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    line-height: 20.24px;
+  }
+}
+
+.collabo-section-wrap .work-email {
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  color: #cccccc;
+  text-decoration: underline;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media screen and (max-width: 63.875em) {
+  .collabo-section-wrap .work-email {
+    font-size: 0.875rem;
+    line-height: 17.71px;
+  }
+}
+
+.collabo-section-wrap .work-email:hover {
+  color: #C84E89;
+  background: -webkit-gradient(linear, left top, right top, from(#c84e89), to(#bf5ae0));
+  background: linear-gradient(to right, #c84e89, #bf5ae0);
+  background: -webkit-linear-gradient(to right, #c84e89, #bf5ae0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.collabo-section-wrap .work-email:focus, .collabo-section-wrap .work-email:active {
+  background: -webkit-gradient(linear, left top, right top, from(#2193B0), to(#05a8d1));
+  background: linear-gradient(to right, #2193B0, #05a8d1);
+  background: -webkit-linear-gradient(to right, #2193B0, #05a8d1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
