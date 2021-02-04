@@ -734,8 +734,6 @@ a {
 .hero-section-wrap {
   width: 100%;
   height: auto;
-  background: url(../../../assets/bitmaps/hero-BG-Image.svg) no-repeat;
-  background-position: 0 bottom;
   padding-bottom: 9.25rem;
 }
 
@@ -1199,7 +1197,7 @@ a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    height: 404px;
+    height: auto;
   }
 }
 
@@ -1349,11 +1347,11 @@ a {
 }
 
 .projects-section .project-card-wrap .project-card .project-card-image {
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
   height: 100%;
   width: 60%;
   max-width: 100%;
@@ -1366,7 +1364,12 @@ a {
 
 @media screen and (max-width: 63.875em) {
   .projects-section .project-card-wrap .project-card .project-card-image {
-    height: 154px;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    height: 254px;
     width: 100%;
   }
 }
