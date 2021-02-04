@@ -12,10 +12,7 @@ $inactive-circle-diam: 20px;
   width: 100%;
   height: auto;
   background: url(../../../assets/bitmaps/hero-BG-Image.svg) no-repeat;
-  // background-repeat: repeat-x;
   background-position: 0 bottom;
-  // animation: 45s slide-bg infinite linear;
-  // -webkit-animation: 45s slide-bg infinite linear;
   padding-bottom: calculate-rem(148px);
   @include deskTopFirst(1022) {
     height: auto;
@@ -30,7 +27,8 @@ $inactive-circle-diam: 20px;
     @include deskTopFirst(1022) {
       max-width: calc(100% - 48px);
       margin: 0 auto;
-      margin-top: 148px;
+      margin-top: 80px;
+      // margin-top: 148px;
     }
 
     .hero-section--content {

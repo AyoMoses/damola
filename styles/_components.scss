@@ -6,29 +6,42 @@ a {
 
 .header-wrap {
   width: 100%;
-  max-width: calc(100% - 160px);
-  margin: 0 auto;
+  max-width: 100%;
+  background: $bg-color;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 99999999;
 
-  @include deskTopFirst(1022) {
-    max-width: 100%;
+  .header__inner {
+    width: 100%;
+    max-width: calc(100% - 160px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include deskTopFirst(1022) {
+      max-width: 100%;
+    }
   }
 }
 .header {
-  position: fixed;
-  z-index: 999999;
+  // position: fixed;
+  // z-index: 999999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: calc(100% - 160px);
   margin: 0 auto;
-  margin-top: 64px;
+  // margin-top: 64px;
 
   @include deskTopFirst(1022) {
     display: inline-block;
     max-width: calc(100% - 24px);
     margin: 0 auto;
-    margin-top: 48px;
+    // margin-top: 48px;
   }
 }
 
@@ -150,7 +163,7 @@ a {
   cursor: pointer;
   // display: inline-block;
   float: right;
-  padding: 16px 0 10px 20px;
+  padding: 16px 10px 10px 20px;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
