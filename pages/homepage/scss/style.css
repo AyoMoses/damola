@@ -1720,6 +1720,7 @@ a {
   .testim-content-wrap .img {
     height: 327px;
     width: 100%;
+    margin-left: 5px;
   }
 }
 
@@ -1751,8 +1752,8 @@ a {
 
 @media screen and (max-width: 63.875em) {
   .testim-content-wrap .img .img-design {
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
     height: 100%;
     width: 100%;
   }
