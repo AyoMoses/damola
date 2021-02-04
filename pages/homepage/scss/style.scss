@@ -1,18 +1,8 @@
 @import '../../../styles/global.scss';
 
-$active-bg-color: #1975cf;
-$active-text-color: white;
-$inactive-bg-color: #c4ddf4;
-$inactive-text-color: #3480d2;
-$line-width: 5%;
-$active-circle-diam: 30px;
-$inactive-circle-diam: 20px;
-
 .hero-section-wrap {
   width: 100%;
   height: auto;
-  // background: url(../../../assets/bitmaps/hero-BG-Image.svg) no-repeat;
-  // background-position: 0 bottom;
   padding-bottom: calculate-rem(148px);
   @include deskTopFirst(1022) {
     height: auto;
