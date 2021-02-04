@@ -509,15 +509,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: calc(100% - 160px);
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 63.875em) {
   .header {
     display: inline-block;
-    max-width: calc(100% - 24px);
-    margin: 0 auto;
   }
 }
 
@@ -729,5 +725,97 @@ a {
   .header .menu-icon {
     display: none;
   }
+}
+
+.case-hero-wrap {
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+  margin-top: 122px;
+}
+
+@media screen and (max-width: 63.875em) {
+  .case-hero-wrap {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-top: 74px;
+  }
+}
+
+.case-hero-wrap .case-hero-header {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 63.875em) {
+  .case-hero-wrap .case-hero-header {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.case-hero-wrap .case-hero-outline-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 72px 0;
+  max-width: 80%;
+}
+
+.case-hero-wrap .case-hero-outline-wrap .case-outline__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.case-hero-wrap .case-hero-outline-wrap .case-outline__inner .case-outline-header,
+.case-hero-wrap .case-hero-outline-wrap .case-outline__inner .case-outline-text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.case-hero-wrap .case-hero-outline-wrap .case-outline__inner [class].case-outline-header {
+  color: #999999;
+}
+
+.case-hero-wrap .case-hero-outline-wrap .case-outline__inner .case-outline-text {
+  color: #ffffff;
+}
+
+.case-hero-wrap .case-hero-outline-wrap .case-outline__inner .case-outline-text:not(:last-of-type) {
+  margin-bottom: 24px;
 }
 /*# sourceMappingURL=case-one.css.map */

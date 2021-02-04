@@ -509,15 +509,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: calc(100% - 160px);
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 63.875em) {
   .header {
     display: inline-block;
-    max-width: calc(100% - 24px);
-    margin: 0 auto;
   }
 }
 

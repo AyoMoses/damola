@@ -1,1 +1,65 @@
 @import '../../../styles/global.scss';
+
+.case-hero-wrap {
+  width: 100%;
+  max-width: calc(100% - 160px); //244px
+  margin: 0 auto;
+  margin-top: 122px;
+  @include deskTopFirst(1022) {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-top: 74px;
+  }
+  .case-hero-header {
+    font-size: calculate-rem(48px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $white;
+
+    @include deskTopFirst(1022) {
+      font-size: calculate-rem(24px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  .case-hero-outline-wrap {
+    @include row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 72px 0;
+    max-width: 80%;
+    .case-outline__inner {
+      @include column;
+      align-items: flex-start;
+
+      .case-outline-header,
+      .case-outline-text {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        text-align: center;
+      }
+      [class].case-outline-header {
+        //class is used to increase specificity. Not proud to use it
+        color: $font-color-grey;
+      }
+      .case-outline-text {
+        color: $white;
+        &:not(:last-of-type) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
