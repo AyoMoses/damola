@@ -760,6 +760,7 @@ a {
     font-weight: 400;
     line-height: 33px;
     letter-spacing: 0em;
+    max-width: 98%;
     text-align: left;
   }
 }
@@ -842,8 +843,94 @@ a {
   margin-bottom: 24px;
 }
 
+.probs-section-wrap {
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+  margin-top: 148px;
+  margin-bottom: 88px;
+}
+
+@media screen and (max-width: 63.875em) {
+  .probs-section-wrap {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-top: 56px;
+    margin-bottom: 48px;
+  }
+}
+
+.probs-section-wrap .probs-section-paragragh {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 64px;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 64px;
+          column-gap: 64px;
+}
+
+@media screen and (max-width: 63.875em) {
+  .probs-section-wrap .probs-section-paragragh {
+    margin-top: 32px;
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+.case-mini-header {
+  font-family: 'lineto-circular-pro';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #999999;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 63.875em) {
+  .case-mini-header {
+    font-size: 0.75rem;
+    line-height: 15px;
+    margin-bottom: 1rem;
+  }
+}
+
+.section-header-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  max-width: 70%;
+}
+
+@media screen and (max-width: 63.875em) {
+  .section-header-text {
+    max-width: 100%;
+    font-size: 1.125rem;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 63.875em) {
+  .unique-block {
+    display: block;
+    margin-top: 24px;
+  }
+}
+
 .case-intro-image {
-  background: #ffffff;
   height: 720px;
   width: 100%;
   max-width: 100%;
@@ -851,11 +938,43 @@ a {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  background: #ffffff;
 }
 
 @media screen and (max-width: 63.875em) {
   .case-intro-image {
     height: 256px;
+  }
+}
+
+.wrap-img {
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 63.875em) {
+  .wrap-img {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+  }
+}
+
+.wrap-img .case-one-img2 {
+  background: #ffffff url("../../../assets/bitmaps/case-one-two-large.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 627px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 112px;
+}
+
+@media screen and (max-width: 48em) {
+  .wrap-img .case-one-img2 {
+    height: 256px;
+    margin-bottom: 48px;
   }
 }
 /*# sourceMappingURL=case-one.css.map */
