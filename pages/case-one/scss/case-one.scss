@@ -424,9 +424,34 @@
   color: $font-color-grey;
   margin-top: 112px;
   margin-bottom: 24px;
+  text-transform: uppercase;
   @include deskTopFirst(1022) {
     margin-top: 48px;
     margin-bottom: 24px;
     font-size: calculate-rem(12px);
+  }
+}
+
+.design-iterate-section {
+  @include double-layer;
+  margin-bottom: 74px;
+  @include deskTopFirst(1022) {
+    margin-bottom: 48px;
+  }
+  .iterate-content {
+    column-count: 2;
+    column-gap: 49px;
+    font-size: calculate-rem(14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $white;
+
+    @include deskTopFirst(1022) {
+      column-count: 1;
+      font-size: calculate-rem(12px);
+    }
   }
 }
