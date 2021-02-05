@@ -103,11 +103,9 @@
     letter-spacing: 0em;
     text-align: left;
     color: $white;
-    margin-top: 64px;
     column-count: 2;
     column-gap: 64px;
     @include deskTopFirst(1022) {
-      margin-top: 32px;
       column-count: 1;
     }
   }
@@ -121,12 +119,12 @@
   letter-spacing: 0.02em;
   text-align: left;
   color: $font-color-grey;
-  margin-bottom: calculate-rem(24px);
+  //   margin-bottom: calculate-rem(24px);
 
   @include deskTopFirst(1022) {
     font-size: calculate-rem(12px);
     line-height: 15px;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
   }
 }
 
@@ -139,11 +137,15 @@
   text-align: left;
   color: $white;
   max-width: 70%;
+  margin-bottom: 64px;
+  margin-top: 24px;
 
   @include deskTopFirst(1022) {
     max-width: 100%;
     font-size: calculate-rem(18px);
     line-height: 25px;
+    margin-top: 1rem;
+    margin-bottom: 32px;
   }
 }
 .unique-block {
@@ -151,6 +153,9 @@
     display: block;
     margin-top: 24px;
   }
+}
+.header-margin-bottom {
+  margin-bottom: 24px;
 }
 
 // IMAGES
@@ -171,7 +176,8 @@
   @include double-layer;
 
   .case-one-img2 {
-    background: $white url('../../../assets/bitmaps/case-one-two-large.jpg') no-repeat;
+    background: $white url('../../../assets/bitmaps/case-one-two-large.jpg')
+      no-repeat;
     background-position: center;
     background-size: cover;
     height: 627px;
@@ -180,8 +186,143 @@
     margin-bottom: 112px;
 
     @include deskTopFirst(768) {
-        height: 256px;
-        margin-bottom: 48px;
+      height: 256px;
+      margin-bottom: 48px;
+    }
+  }
+}
+
+// PERSONA
+.proto-persona-section {
+  @include double-layer;
+  .persona-header {
+    margin-bottom: 32px;
+    font-size: calculate-rem(24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $white;
+
+    @include deskTopFirst(1022) {
+      font-size: calculate-rem(18px);
+      line-height: 25px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .persona__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 72px;
+
+    @include deskTopFirst(1022) {
+      grid-template-columns: 1fr;
+      gap: 32.12px 0;
+    }
+
+    .persona-image-wrap {
+      display: block;
+      .persona-img {
+        height: 270px;
+        width: 340px;
+        object-fit: cover;
+        object-position: center;
+
+        @include deskTopFirst(1022) {
+            width: 100%;
+            max-width: 100%;
+            height: 350px;
+        }
+      }
+      .persona-img-thumbnail-wrap {
+        padding: 18px 0 18px 24px;
+
+        @include deskTopFirst(1022) {
+          padding: 16.16px 0 16.12px 21.55px;
+        }
+        .thumbnail-header {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: $white;
+          margin-bottom: 4px;
+
+          @include deskTopFirst(1022) {
+            font-size: calculate-rem(14px);
+            line-height: 18px;
+          }
+        }
+        .thumbnail-text {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: $font-color-grey;
+
+          @include deskTopFirst(1022) {
+            font-size: calculate-rem(14px);
+          }
+        }
+      }
+    }
+
+    .persona-content-wrap {
+      @include column;
+      justify-content: flex-start;
+      padding-right: 100px;
+      .persona-section {
+        .persona-section-header {
+          font-family: 'lineto-circular-pro';
+          font-size: calculate-rem(20px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: $white;
+          margin-bottom: 21px;
+
+          @include deskTopFirst(1022) {
+            font-size: 1rem;
+            line-height: 20px;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .persona-content-list {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: $font-color-grey;
+          list-style-type: initial;
+          margin-bottom: 8px;
+          list-style-position: inside;
+
+          @include deskTopFirst(1022) {
+            font-size: calculate-rem(12px);
+            line-height: 15px;
+          }
+        }
+      }
+
+      .persona-hr {
+        border: 1px solid #2f2f37;
+        margin: 40px 0;
+
+        @include deskTopFirst(1022) {
+            margin: 24px 0;
+        }
+      }
     }
   }
 }
