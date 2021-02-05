@@ -63,3 +63,18 @@
     }
   }
 }
+
+
+.case-intro-image {
+    background: $white;
+    height: 720px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    @include deskTopFirst(1022) {
+        height: 256px;
+    }
+}

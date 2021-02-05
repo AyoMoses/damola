@@ -818,4 +818,22 @@ a {
 .case-hero-wrap .case-hero-outline-wrap .case-outline__inner .case-outline-text:not(:last-of-type) {
   margin-bottom: 24px;
 }
+
+.case-intro-image {
+  background: #ffffff;
+  height: 720px;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+
+@media screen and (max-width: 63.875em) {
+  .case-intro-image {
+    height: 256px;
+  }
+}
 /*# sourceMappingURL=case-one.css.map */
