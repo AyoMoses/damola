@@ -784,6 +784,29 @@ a {
   max-width: 80%;
 }
 
+@media screen and (max-width: 63.875em) {
+  .case-hero-wrap .case-hero-outline-wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 40px 54px;
+    margin-right: 5%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 35.8125em) {
+  .case-hero-wrap .case-hero-outline-wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 50px 0;
+    margin-right: 0;
+  }
+}
+
 .case-hero-wrap .case-hero-outline-wrap .case-outline__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,7 +851,6 @@ a {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  display: block;
 }
 
 @media screen and (max-width: 63.875em) {

@@ -37,6 +37,21 @@
     flex-wrap: wrap;
     margin: 72px 0;
     max-width: 80%;
+    @include deskTopFirst(1022) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 54px;
+        margin-right: 5%;
+        max-width: 100%
+    }
+    
+    @include deskTopFirst(573) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px 0;
+        margin-right: 0;
+    }
+
     .case-outline__inner {
       @include column;
       align-items: flex-start;
@@ -72,7 +87,6 @@
     max-width: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
 
     @include deskTopFirst(1022) {
         height: 256px;
