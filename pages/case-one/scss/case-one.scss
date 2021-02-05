@@ -375,3 +375,58 @@
     line-height: 13px;
   }
 }
+
+.more-insight-section {
+  @include double-layer;
+  .insight__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 132px;
+
+    @include deskTopFirst(1022) {
+      grid-template-columns: 1fr;
+      gap: 48px 0;
+    }
+
+    .more-insight-col {
+      .insight-list {
+        font-size: calculate-rem(14px);
+        line-height: 24px;
+        text-align: left;
+        font-style: normal;
+        font-weight: 400;
+        color: $white;
+        list-style-type: initial;
+        margin-bottom: 1rem;
+        list-style-position: inside;
+
+        @include deskTopFirst(1022) {
+          font-size: calculate-rem(12px);
+        }
+      }
+    }
+
+    .more-insight-image {
+      @include deskTopFirst(1022) {
+        width: 100%;
+      }
+    }
+  }
+}
+.sect-mini-header {
+  font-family: 'lineto-circular-pro';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $font-color-grey;
+  margin-top: 112px;
+  margin-bottom: 24px;
+  @include deskTopFirst(1022) {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    font-size: calculate-rem(12px);
+  }
+}

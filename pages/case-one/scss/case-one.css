@@ -1161,24 +1161,6 @@ a {
   }
 }
 
-.case-image-wrap {
-  width: 100%;
-  max-width: calc(100% - 160px);
-  margin: 0 auto;
-  margin-top: 90px;
-  margin-bottom: 74px;
-}
-
-@media screen and (max-width: 63.875em) {
-  .case-image-wrap {
-    width: 100%;
-    max-width: calc(100% - 48px);
-    margin: 0 auto;
-    margin-top: 48px;
-    margin-bottom: 32px;
-  }
-}
-
 .case-image {
   display: block;
   width: 100%;
@@ -1234,6 +1216,81 @@ a {
   .tiny-tip {
     font-size: 0.625rem;
     line-height: 13px;
+  }
+}
+
+.more-insight-section {
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 63.875em) {
+  .more-insight-section {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+  }
+}
+
+.more-insight-section .insight__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 0 132px;
+}
+
+@media screen and (max-width: 63.875em) {
+  .more-insight-section .insight__inner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 48px 0;
+  }
+}
+
+.more-insight-section .insight__inner .more-insight-col .insight-list {
+  font-size: 0.875rem;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  list-style-type: initial;
+  margin-bottom: 1rem;
+  list-style-position: inside;
+}
+
+@media screen and (max-width: 63.875em) {
+  .more-insight-section .insight__inner .more-insight-col .insight-list {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 63.875em) {
+  .more-insight-section .insight__inner .more-insight-image {
+    width: 100%;
+  }
+}
+
+.sect-mini-header {
+  font-family: 'lineto-circular-pro';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #999999;
+  margin-top: 112px;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 63.875em) {
+  .sect-mini-header {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=case-one.css.map */
