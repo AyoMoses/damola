@@ -130,14 +130,18 @@ checkbox.addEventListener('click', function () {
 
 // SCROLL TO VIEW
 var downBtn = document.querySelector('.scroll-down-btn');
+var aboutBtn = document.querySelector('.to-abt-btn');
 var workExpBtn = document.querySelector('.work-btn');
 var contactBtn = document.querySelector('.contact-btn');
 
 var aboutEl = document.querySelector('.about-section');
-let workEl = document.querySelector('.work-section');
+var workEl = document.querySelector('.work-section');
 var contactEl = document.querySelector('.contact-section');
 
 downBtn.addEventListener('click', function () {
+  aboutEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+});
+aboutBtn.addEventListener('click', function () {
   aboutEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
 });
 workExpBtn.addEventListener('click', function () {
