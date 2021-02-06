@@ -1212,6 +1212,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 63.875em) {
