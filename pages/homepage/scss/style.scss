@@ -469,6 +469,13 @@
           align-items: center;
           color: $white;
 
+          &:hover {
+            color: lighten($color: #d96490, $amount: 15%);
+          }
+          &:focus {
+            color: lighten($color: #d96490, $amount: 20%);
+          }
+
           @include deskTopFirst(1022) {
             font-size: calculate-rem(12px);
             line-height: 15px;
@@ -477,6 +484,13 @@
           .resume-icon {
             margin-left: 8px;
           }
+
+        }
+        .case-study-link:hover .case-study-icon {
+          fill: lighten($color: #d96490, $amount: 15%);
+        }
+        .case-study-link:focus .case-study-icon {
+          color: lighten($color: #d96490, $amount: 20%);
         }
       }
       .project-card-image {

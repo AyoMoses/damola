@@ -1663,6 +1663,14 @@ a {
   color: #ffffff;
 }
 
+.projects-section .project-card-wrap .project-card .project-card-content .case-study-link:hover {
+  color: #e8a1bc;
+}
+
+.projects-section .project-card-wrap .project-card .project-card-content .case-study-link:focus {
+  color: #edb6cb;
+}
+
 @media screen and (max-width: 63.875em) {
   .projects-section .project-card-wrap .project-card .project-card-content .case-study-link {
     font-size: 0.75rem;
@@ -1672,6 +1680,14 @@ a {
 
 .projects-section .project-card-wrap .project-card .project-card-content .case-study-link .resume-icon {
   margin-left: 8px;
+}
+
+.projects-section .project-card-wrap .project-card .project-card-content .case-study-link:hover .case-study-icon {
+  fill: #e8a1bc;
+}
+
+.projects-section .project-card-wrap .project-card .project-card-content .case-study-link:focus .case-study-icon {
+  color: #edb6cb;
 }
 
 .projects-section .project-card-wrap .project-card .project-card-image {
