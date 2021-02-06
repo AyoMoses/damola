@@ -506,3 +506,61 @@
     }
   }
 }
+
+// PAGINATION
+.pagination-wrap {
+  @include double-layer;
+  margin-top: 112px;
+  @include flex-space-between;
+  @include deskTopFirst(1022) {
+    margin-top: 48px;
+  }
+  .previous,
+  .next {
+    font-size: calculate-rem(24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $font-color-grey;
+
+    @include deskTopFirst(1022) {
+      font-size: calculate-rem(14px);
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .next,
+  .previous {
+    @include transition;
+    @include row;
+    align-items: center;
+  }
+
+  .next:hover .pagicon {
+    fill: white;
+    animation: pagicon-next 2s infinite;
+    -webkit-animation: pagicon-next 2s infinite;
+  }
+  .previous:hover .pagicon {
+    fill: white;
+    animation: pagicon-previous 2s infinite;
+    -webkit-animation: pagicon-previous 2s infinite;
+  }
+
+  .pagicon-previous {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+  }
+  .pagicon-next {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    z-index: 100;
+  }
+}
