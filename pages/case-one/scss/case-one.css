@@ -1441,6 +1441,12 @@ a {
   padding-right: 100px;
 }
 
+@media screen and (max-width: 63.875em) {
+  .proto-persona-section .persona__inner .persona-content-wrap {
+    padding-right: 0;
+  }
+}
+
 .proto-persona-section .persona__inner .persona-content-wrap .persona-section .persona-section-header {
   font-family: 'lineto-circular-pro';
   font-size: 1.25rem;
@@ -1533,6 +1539,10 @@ a {
 }
 
 .tiny-tip {
+  width: 100%;
+  max-width: calc(100% - 160px);
+  margin: 0 auto;
+  margin-top: 24px;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
@@ -1540,11 +1550,14 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #999999;
-  margin-top: 24px;
 }
 
 @media screen and (max-width: 63.875em) {
   .tiny-tip {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-top: 16px;
     font-size: 0.625rem;
     line-height: 13px;
   }

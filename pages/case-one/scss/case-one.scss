@@ -277,6 +277,11 @@
       @include column;
       justify-content: flex-start;
       padding-right: 100px;
+
+      @include deskTopFirst(1022) {
+        padding-right: 0;
+      }
+
       .persona-section {
         .persona-section-header {
           font-family: 'lineto-circular-pro';
@@ -361,6 +366,10 @@
 }
 
 .tiny-tip {
+  width: 100%;
+  max-width: calc(100% - 160px); //244px
+  margin: 0 auto;
+  margin-top: 24px;
   font-size: calculate-rem(12px);
   font-style: normal;
   font-weight: 400;
@@ -368,9 +377,12 @@
   letter-spacing: 0.02em;
   text-align: center;
   color: $font-color-grey;
-  margin-top: 24px;
 
   @include deskTopFirst(1022) {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-top: 16px;
     font-size: calculate-rem(10px);
     line-height: 13px;
   }
@@ -564,8 +576,6 @@
     z-index: 100;
   }
 }
-
-
 
 .collabo-section-wrap {
   height: auto;
