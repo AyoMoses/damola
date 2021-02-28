@@ -497,54 +497,6 @@
   }
 }
 
-@keyframes tail {
-  0% {
-    width: 0;
-  }
-
-  30% {
-    width: 100px;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes shining {
-  0% {
-    width: 0;
-  }
-
-  50% {
-    width: 30px;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes shooting {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(300px);
-  }
-}
-
-@keyframes sky {
-  0% {
-    transform: rotate(45deg);
-  }
-
-  100% {
-    transform: rotate(45 + 360deg);
-  }
-}
-
 // @keyframes
 // @-moz-keyframes
 // @-webkit-keyframes
