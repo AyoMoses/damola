@@ -18,7 +18,7 @@
   left: 50px;
 
   @include deskTopFirst(1080) {
-    top: 10px;
+    top: 40px;
   }
 }
 .dot-two {
@@ -27,7 +27,7 @@
   right: 50px;
 
   @include deskTopFirst(1080) {
-    top: 20px;
+    top: 80px;
   }
 }
 .dot-three {
