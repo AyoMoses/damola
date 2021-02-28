@@ -430,6 +430,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0d0d0f;
+  position: relative;
 }
 
 ul,
@@ -1056,6 +1057,114 @@ a {
 
 .footer-section-wrapper .footer-section__inner .footer-copyright-wrap .copyright-text .white {
   color: #ffffff;
+}
+
+.dots-wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+.dot {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.dot-one {
+  background: #C84E89;
+  top: 50px;
+  left: 50px;
+}
+
+.dot-two {
+  background: #C84E89;
+  top: 100px;
+  right: 50px;
+}
+
+.dot-three {
+  background: #2193B0;
+  bottom: 10px;
+  right: 20px;
+}
+
+.dot-four {
+  background: #C84E89;
+  bottom: 1%;
+  right: 20%;
+}
+
+.dot-five {
+  background: #2193B0;
+  bottom: 10%;
+  left: 20%;
+}
+
+.dot-six {
+  background: #C84E89;
+  top: 17%;
+  left: 20%;
+}
+
+.dot-seven {
+  background: #2193B0;
+  bottom: 60%;
+  left: 1%;
+}
+
+.dot-eight {
+  background: #C84E89;
+  bottom: 30%;
+  right: 19%;
+}
+
+.dot-nine {
+  background: #2193B0;
+  bottom: 40%;
+  right: 40%;
+}
+
+.dot-ten {
+  background: #C84E89;
+  top: 17%;
+  left: 50%;
+}
+
+.dot-eleven {
+  background: #C84E89;
+  bottom: 60%;
+  right: 19%;
+}
+
+.dot-twelve {
+  background: #C84E89;
+  top: 37%;
+  left: 55%;
+}
+
+.dot-thirteen {
+  background: #2193B0;
+  bottom: 50%;
+  right: 5%;
+}
+
+.dot-fourteen {
+  background: #C84E89;
+  top: 48%;
+  left: 65%;
+}
+
+.dot-fifteen {
+  background: #2193B0;
+  top: 50%;
+  right: 60%;
 }
 
 .hero-section-wrap {
