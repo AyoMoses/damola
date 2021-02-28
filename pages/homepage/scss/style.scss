@@ -6,7 +6,7 @@
 }
 .dot {
   content: '';
-  position: absolute;
+  position: fixed;
   z-index: -1;
   width: 2px;
   height: 2px;
