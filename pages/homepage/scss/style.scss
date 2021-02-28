@@ -16,11 +16,19 @@
   background: $card-bg;
   top: 50px;
   left: 50px;
+
+  @include deskTopFirst(1080) {
+    top: 10px;
+  }
 }
 .dot-two {
   background: $card-bg;
   top: 100px;
   right: 50px;
+
+  @include deskTopFirst(1080) {
+    top: 20px;
+  }
 }
 .dot-three {
   background: $card-bg-2;

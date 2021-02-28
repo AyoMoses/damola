@@ -1083,10 +1083,22 @@ a {
   left: 50px;
 }
 
+@media screen and (max-width: 67.5em) {
+  .dot-one {
+    top: 10px;
+  }
+}
+
 .dot-two {
   background: #C84E89;
   top: 100px;
   right: 50px;
+}
+
+@media screen and (max-width: 67.5em) {
+  .dot-two {
+    top: 20px;
+  }
 }
 
 .dot-three {
